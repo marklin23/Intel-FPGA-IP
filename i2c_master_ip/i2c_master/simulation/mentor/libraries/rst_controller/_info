@@ -7,46 +7,46 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dE:/work/project/11_Accton/_ChaoHua/_ES8632BT_400G/01_Source_Code/FPGA/ES8632BT_400G_FPGA_R0A_20180822/Quartus_16_1/ip/i2c_master_ip/i2c_master/simulation/mentor
+dE:/work/project/11_Accton/_ChaoHua/_ES8632BT_400G/01_Source_Code/FPGA/ES8632BT_400G_FPGA_R0A_20180822/Quartus_16_1/ip/i2c_master_ip/i2c_master/simulation/mentor
 valtera_reset_controller
-!s110 1534994455
+Z0 !s110 1534998826
 !i10b 1
 !s100 z[H_hRO9gO=:^2E3_jWH03
 I5VG:hXMS<^z[_N3SMUlKT3
 Z1 VDg1SIo80bB@j0V0VzS_@n1
-R0
-Z2 w1534925442
+Z2 dC:/Users/markl/Documents/GitHub/Intel-FPGA-IP/i2c_master_ip/i2c_master/simulation/mentor
+Z3 w1534925442
 8./../submodules/altera_reset_controller.v
 F./../submodules/altera_reset_controller.v
 L0 42
-Z3 OV;L;10.5b;63
+Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-!s108 1534994455.000000
+Z5 !s108 1534998826.000000
 !s107 ./../submodules/altera_reset_controller.v|
 !s90 -reportprogress|300|./../submodules/altera_reset_controller.v|-work|rst_controller|
 !i113 1
-Z4 o-work rst_controller
-Z5 tCvgOpt 0
+Z6 o-work rst_controller
+Z7 tCvgOpt 0
 valtera_reset_synchronizer
-!s110 1534994456
+R0
 !i10b 1
 !s100 oWLYmSO[EOX[G0PgQhZ2=0
 IhFVbn]P0aM7VjLNcWTf]C0
 R1
-R0
 R2
+R3
 8./../submodules/altera_reset_synchronizer.v
 F./../submodules/altera_reset_synchronizer.v
 L0 24
-R3
+R4
 r1
 !s85 0
 31
-!s108 1534994456.000000
+R5
 !s107 ./../submodules/altera_reset_synchronizer.v|
 !s90 -reportprogress|300|./../submodules/altera_reset_synchronizer.v|-work|rst_controller|
 !i113 1
-R4
-R5
+R6
+R7

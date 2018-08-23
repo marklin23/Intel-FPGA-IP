@@ -200,7 +200,7 @@ alias com {
   eval  vlog $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_avalon_i2c_txshifter.v" -work i2c_1         
   eval  vlog $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_avalon_i2c_spksupp.v"   -work i2c_1         
   eval  vlog $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/submodules/altera_avalon_i2c_txout.v"     -work i2c_1   
-  eval  vlog $USER_DEFINED_COMPILE_OPTIONS "E:/work/project/11_Accton/_ChaoHua/_ES8632BT_400G/01_Source_Code/FPGA/ES8632BT_400G_FPGA_R0A_20180822/Quartus_16_1/ip/i2c_master_ip/i2c_m_ctrl.v"  
+  eval  vlog $USER_DEFINED_COMPILE_OPTIONS "i2c_m_ctrl.v"  
   eval  vlog $USER_DEFINED_COMPILE_OPTIONS "tb/IIC_Decoder.v" 
   eval  vlog $USER_DEFINED_COMPILE_OPTIONS "tb/i2c_slave_t_top.v" 
   eval  vlog $USER_DEFINED_COMPILE_OPTIONS "$QSYS_SIMDIR/i2c_master.v"    

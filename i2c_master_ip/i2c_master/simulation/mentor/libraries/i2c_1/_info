@@ -7,14 +7,14 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dE:/work/project/11_Accton/_ChaoHua/_ES8632BT_400G/01_Source_Code/FPGA/ES8632BT_400G_FPGA_R0A_20180822/Quartus_16_1/ip/i2c_master_ip/i2c_master/simulation/mentor
+dE:/work/project/11_Accton/_ChaoHua/_ES8632BT_400G/01_Source_Code/FPGA/ES8632BT_400G_FPGA_R0A_20180822/Quartus_16_1/ip/i2c_master_ip/i2c_master/simulation/mentor
 valtera_avalon_i2c
-Z1 !s110 1534994456
+Z0 !s110 1534998827
 !i10b 1
 !s100 i;I80YB`l0<cOH0Mh0OXC2
 Ib0E<m2IRFQ4hJ]@jOKE]W1
-Z2 VDg1SIo80bB@j0V0VzS_@n1
-R0
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/markl/Documents/GitHub/Intel-FPGA-IP/i2c_master_ip/i2c_master/simulation/mentor
 Z3 w1534925442
 8./../submodules/altera_avalon_i2c.v
 F./../submodules/altera_avalon_i2c.v
@@ -23,19 +23,19 @@ Z5 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z6 !s108 1534994456.000000
+Z6 !s108 1534998827.000000
 !s107 ./../submodules/altera_avalon_i2c.v|
 !s90 -reportprogress|300|./../submodules/altera_avalon_i2c.v|-work|i2c_1|
 !i113 1
 Z7 o-work i2c_1
 Z8 tCvgOpt 0
 valtera_avalon_i2c_clk_cnt
-R1
+R0
 !i10b 1
 !s100 CAQU3PEJGHFhmUSJ9nV@02
 I<UF=anih@9kikIZog<3A23
+R1
 R2
-R0
 R3
 8./../submodules/altera_avalon_i2c_clk_cnt.v
 F./../submodules/altera_avalon_i2c_clk_cnt.v
@@ -51,12 +51,12 @@ R6
 R7
 R8
 valtera_avalon_i2c_condt_det
-R1
+R0
 !i10b 1
 !s100 NWHS0:R1WP@@17W[f`AJI0
 ITRI622SV<7P?MFOg@A<N=0
+R1
 R2
-R0
 R3
 8./../submodules/altera_avalon_i2c_condt_det.v
 F./../submodules/altera_avalon_i2c_condt_det.v
@@ -72,12 +72,12 @@ R6
 R7
 R8
 valtera_avalon_i2c_condt_gen
-R1
+R0
 !i10b 1
 !s100 F?IU54?<EV_ITzfFeG@`Z2
 IUfOA2j`6JFdK5B?XDdF_S0
+R1
 R2
-R0
 R3
 8./../submodules/altera_avalon_i2c_condt_gen.v
 F./../submodules/altera_avalon_i2c_condt_gen.v
@@ -93,12 +93,12 @@ R6
 R7
 R8
 valtera_avalon_i2c_csr
-R1
+R0
 !i10b 1
 !s100 _=XDE5_WWD1FP8Djl72V@1
 IDAidz_T6Wa7@50Z2zMPJU3
+R1
 R2
-R0
 R3
 8./../submodules/altera_avalon_i2c_csr.v
 F./../submodules/altera_avalon_i2c_csr.v
@@ -114,12 +114,12 @@ R6
 R7
 R8
 valtera_avalon_i2c_fifo
-R1
+R0
 !i10b 1
 !s100 K6:GE0kJz4H;LzVG[N3Ao2
 Il7AVnfIN0GmTinZI;929o0
+R1
 R2
-R0
 R3
 8./../submodules/altera_avalon_i2c_fifo.v
 F./../submodules/altera_avalon_i2c_fifo.v
@@ -135,12 +135,12 @@ R6
 R7
 R8
 valtera_avalon_i2c_mstfsm
-Z9 !s110 1534994457
+R0
 !i10b 1
 !s100 EoIZ@gjk[7@:RNMP??jE51
 Io1lko^><`2FZ?ad;06f7D3
+R1
 R2
-R0
 R3
 8./../submodules/altera_avalon_i2c_mstfsm.v
 F./../submodules/altera_avalon_i2c_mstfsm.v
@@ -149,19 +149,19 @@ R5
 r1
 !s85 0
 31
-Z10 !s108 1534994457.000000
+R6
 !s107 ./../submodules/altera_avalon_i2c_mstfsm.v|
 !s90 -reportprogress|300|./../submodules/altera_avalon_i2c_mstfsm.v|-work|i2c_1|
 !i113 1
 R7
 R8
 valtera_avalon_i2c_rxshifter
-R9
+Z9 !s110 1534998828
 !i10b 1
 !s100 NH?j7@d_^5gIg43`l^N`W3
 I6z6WVYG;lYl]`XW^ZAPH<2
+R1
 R2
-R0
 R3
 8./../submodules/altera_avalon_i2c_rxshifter.v
 F./../submodules/altera_avalon_i2c_rxshifter.v
@@ -170,7 +170,7 @@ R5
 r1
 !s85 0
 31
-R10
+R6
 !s107 ./../submodules/altera_avalon_i2c_rxshifter.v|
 !s90 -reportprogress|300|./../submodules/altera_avalon_i2c_rxshifter.v|-work|i2c_1|
 !i113 1
@@ -181,8 +181,8 @@ R9
 !i10b 1
 !s100 L4Jc3zDI^<U>:e]oA=kFJ0
 IbQEAPKK=3j6NP]e:YkzTU0
+R1
 R2
-R0
 R3
 8./../submodules/altera_avalon_i2c_spksupp.v
 F./../submodules/altera_avalon_i2c_spksupp.v
@@ -191,7 +191,7 @@ R5
 r1
 !s85 0
 31
-R10
+Z10 !s108 1534998828.000000
 !s107 ./../submodules/altera_avalon_i2c_spksupp.v|
 !s90 -reportprogress|300|./../submodules/altera_avalon_i2c_spksupp.v|-work|i2c_1|
 !i113 1
@@ -202,8 +202,8 @@ R9
 !i10b 1
 !s100 :0U7=ZbJ=6_9QSWgb9VmM1
 I8KPM8Hnk>WDKz8J1eRLGg1
+R1
 R2
-R0
 R3
 8./../submodules/altera_avalon_i2c_txout.v
 F./../submodules/altera_avalon_i2c_txout.v
@@ -223,8 +223,8 @@ R9
 !i10b 1
 !s100 ceW5>`_l>2G>TjfE>=9`60
 IU_bB7l;nN^Q:emmL_[l>;2
+R1
 R2
-R0
 R3
 8./../submodules/altera_avalon_i2c_txshifter.v
 F./../submodules/altera_avalon_i2c_txshifter.v
