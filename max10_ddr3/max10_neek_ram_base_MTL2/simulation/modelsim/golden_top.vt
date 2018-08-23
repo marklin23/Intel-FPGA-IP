@@ -1,0 +1,366 @@
+// Copyright (C) 2016  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel MegaCore Function License Agreement, or other 
+// applicable license agreement, including, without limitation, 
+// that your use is for the sole purpose of programming logic 
+// devices manufactured by Intel and sold by Intel or its 
+// authorized distributors.  Please refer to the applicable 
+// agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "07/30/2018 15:51:50"
+                                                                                
+// Verilog Test Bench template for design : golden_top
+// 
+// Simulation tool : ModelSim-Altera (Verilog)
+// 
+
+`timescale 1 ns/ 1 ps
+module golden_top_vlg_tst();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg ADC_CLK_10;
+reg treg_AUDIO_BCLK;
+reg AUDIO_DOUT_MFP2;
+reg treg_AUDIO_GPIO_MFP5;
+reg AUDIO_MISO_MFP4;
+reg treg_AUDIO_RESET_n;
+reg treg_AUDIO_SDA_MOSI;
+reg treg_AUDIO_WCLK;
+reg treg_CAMERA_I2C_SDA;
+reg treg_DAC_DATA;
+reg treg_DDR3_CK_n;
+reg treg_DDR3_CK_p;
+reg [23:0] treg_DDR3_DQ;
+reg [2:0] treg_DDR3_DQS_n;
+reg [2:0] treg_DDR3_DQS_p;
+reg [3:0] treg_FLASH_DATA;
+reg FPGA_RESET_n;
+reg [7:0] treg_GPIO;
+reg [2:1] GSENSOR_INT;
+reg treg_GSENSOR_SCLK;
+reg treg_GSENSOR_SDI;
+reg treg_GSENSOR_SDO;
+reg HDMI_AP;
+reg treg_HDMI_I2C_SCL;
+reg treg_HDMI_I2C_SDA;
+reg treg_HDMI_LRCLK;
+reg treg_HDMI_MCLK;
+reg HDMI_RX_CLK;
+reg [23:0] HDMI_RX_D;
+reg HDMI_RX_DE;
+reg treg_HDMI_RX_HS;
+reg HDMI_RX_INT1;
+reg treg_HDMI_RX_RESET_n;
+reg HDMI_RX_VS;
+reg treg_HDMI_SCLK;
+reg [4:0] KEY;
+reg treg_LSENSOR_INT;
+reg treg_LSENSOR_SDA;
+reg MAX10_CLK1_50;
+reg MAX10_CLK2_50;
+reg MAX10_CLK3_50;
+reg treg_MIPI_I2C_SDA;
+reg MIPI_PIXEL_CLK;
+reg [23:0] MIPI_PIXEL_D;
+reg MIPI_PIXEL_HS;
+reg MIPI_PIXEL_VS;
+reg treg_MTL2_I2C_SDA;
+reg MTL2_INT;
+reg NET_INT_n;
+reg NET_LINK100;
+reg treg_NET_MDIO;
+reg NET_RX_CLK;
+reg NET_RX_COL;
+reg NET_RX_CRS;
+reg [3:0] NET_RX_D;
+reg NET_RX_DV;
+reg NET_RX_ER;
+reg NET_TX_CLK;
+reg treg_PM_I2C_SDA;
+reg treg_PS2_CLK;
+reg treg_PS2_CLK2;
+reg treg_PS2_DAT;
+reg treg_PS2_DAT2;
+reg RH_TEMP_DRDY_n;
+reg treg_RH_TEMP_I2C_SDA;
+reg treg_SD_CMD;
+reg [3:0] treg_SD_DATA;
+reg [9:0] SW;
+reg UART_RX;
+// wires                                               
+wire AUDIO_BCLK;
+wire AUDIO_DIN_MFP1;
+wire AUDIO_GPIO_MFP5;
+wire AUDIO_MCLK;
+wire AUDIO_RESET_n;
+wire AUDIO_SCLK_MFP3;
+wire AUDIO_SCL_SS_n;
+wire AUDIO_SDA_MOSI;
+wire AUDIO_SPI_SELECT;
+wire AUDIO_WCLK;
+wire CAMERA_I2C_SCL;
+wire CAMERA_I2C_SDA;
+wire CAMERA_PWDN_n;
+wire DAC_DATA;
+wire DAC_SCLK;
+wire DAC_SYNC_n;
+wire [14:0]  DDR3_A;
+wire [2:0]  DDR3_BA;
+wire DDR3_CAS_n;
+wire DDR3_CKE;
+wire DDR3_CK_n;
+wire DDR3_CK_p;
+wire DDR3_CS_n;
+wire [2:0]  DDR3_DM;
+wire [23:0]  DDR3_DQ;
+wire [2:0]  DDR3_DQS_n;
+wire [2:0]  DDR3_DQS_p;
+wire DDR3_ODT;
+wire DDR3_RAS_n;
+wire DDR3_RESET_n;
+wire DDR3_WE_n;
+wire [3:0]  FLASH_DATA;
+wire FLASH_DCLK;
+wire FLASH_NCSO;
+wire FLASH_RESET_n;
+wire [7:0]  GPIO;
+wire GSENSOR_CS_n;
+wire GSENSOR_SCLK;
+wire GSENSOR_SDI;
+wire GSENSOR_SDO;
+wire HDMI_I2C_SCL;
+wire HDMI_I2C_SDA;
+wire HDMI_LRCLK;
+wire HDMI_MCLK;
+wire HDMI_RX_HS;
+wire HDMI_RX_RESET_n;
+wire HDMI_SCLK;
+wire [6:0]  HEX0;
+wire [6:0]  HEX1;
+wire [9:0]  LEDR;
+wire LSENSOR_INT;
+wire LSENSOR_SCL;
+wire LSENSOR_SDA;
+wire MIPI_CS_n;
+wire MIPI_I2C_SCL;
+wire MIPI_I2C_SDA;
+wire MIPI_REFCLK;
+wire MIPI_RESET_n;
+wire [7:0]  MTL2_B;
+wire MTL2_BL_ON_n;
+wire MTL2_DCLK;
+wire [7:0]  MTL2_G;
+wire MTL2_HSD;
+wire MTL2_I2C_SCL;
+wire MTL2_I2C_SDA;
+wire [7:0]  MTL2_R;
+wire MTL2_VSD;
+wire NET_GTX_CLK;
+wire NET_MDC;
+wire NET_MDIO;
+wire NET_RST_N;
+wire [3:0]  NET_TX_D;
+wire NET_TX_EN;
+wire NET_TX_ER;
+wire PM_I2C_SCL;
+wire PM_I2C_SDA;
+wire PS2_CLK;
+wire PS2_CLK2;
+wire PS2_DAT;
+wire PS2_DAT2;
+wire RH_TEMP_I2C_SCL;
+wire RH_TEMP_I2C_SDA;
+wire SD_CLK;
+wire SD_CMD;
+wire [3:0]  SD_DATA;
+wire UART_RESET_n;
+wire UART_TX;
+
+// assign statements (if any)                          
+assign AUDIO_BCLK = treg_AUDIO_BCLK;
+assign AUDIO_GPIO_MFP5 = treg_AUDIO_GPIO_MFP5;
+assign AUDIO_RESET_n = treg_AUDIO_RESET_n;
+assign AUDIO_SDA_MOSI = treg_AUDIO_SDA_MOSI;
+assign AUDIO_WCLK = treg_AUDIO_WCLK;
+assign CAMERA_I2C_SDA = treg_CAMERA_I2C_SDA;
+assign DAC_DATA = treg_DAC_DATA;
+assign DDR3_CK_n = treg_DDR3_CK_n;
+assign DDR3_CK_p = treg_DDR3_CK_p;
+assign DDR3_DQ = treg_DDR3_DQ;
+assign DDR3_DQS_n = treg_DDR3_DQS_n;
+assign DDR3_DQS_p = treg_DDR3_DQS_p;
+assign FLASH_DATA = treg_FLASH_DATA;
+assign GPIO = treg_GPIO;
+assign GSENSOR_SCLK = treg_GSENSOR_SCLK;
+assign GSENSOR_SDI = treg_GSENSOR_SDI;
+assign GSENSOR_SDO = treg_GSENSOR_SDO;
+assign HDMI_I2C_SCL = treg_HDMI_I2C_SCL;
+assign HDMI_I2C_SDA = treg_HDMI_I2C_SDA;
+assign HDMI_LRCLK = treg_HDMI_LRCLK;
+assign HDMI_MCLK = treg_HDMI_MCLK;
+assign HDMI_RX_HS = treg_HDMI_RX_HS;
+assign HDMI_RX_RESET_n = treg_HDMI_RX_RESET_n;
+assign HDMI_SCLK = treg_HDMI_SCLK;
+assign LSENSOR_INT = treg_LSENSOR_INT;
+assign LSENSOR_SDA = treg_LSENSOR_SDA;
+assign MIPI_I2C_SDA = treg_MIPI_I2C_SDA;
+assign MTL2_I2C_SDA = treg_MTL2_I2C_SDA;
+assign NET_MDIO = treg_NET_MDIO;
+assign PM_I2C_SDA = treg_PM_I2C_SDA;
+assign PS2_CLK = treg_PS2_CLK;
+assign PS2_CLK2 = treg_PS2_CLK2;
+assign PS2_DAT = treg_PS2_DAT;
+assign PS2_DAT2 = treg_PS2_DAT2;
+assign RH_TEMP_I2C_SDA = treg_RH_TEMP_I2C_SDA;
+assign SD_CMD = treg_SD_CMD;
+assign SD_DATA = treg_SD_DATA;
+golden_top i1 (
+// port map - connection between master ports and signals/registers   
+	.ADC_CLK_10(ADC_CLK_10),
+	.AUDIO_BCLK(AUDIO_BCLK),
+	.AUDIO_DIN_MFP1(AUDIO_DIN_MFP1),
+	.AUDIO_DOUT_MFP2(AUDIO_DOUT_MFP2),
+	.AUDIO_GPIO_MFP5(AUDIO_GPIO_MFP5),
+	.AUDIO_MCLK(AUDIO_MCLK),
+	.AUDIO_MISO_MFP4(AUDIO_MISO_MFP4),
+	.AUDIO_RESET_n(AUDIO_RESET_n),
+	.AUDIO_SCLK_MFP3(AUDIO_SCLK_MFP3),
+	.AUDIO_SCL_SS_n(AUDIO_SCL_SS_n),
+	.AUDIO_SDA_MOSI(AUDIO_SDA_MOSI),
+	.AUDIO_SPI_SELECT(AUDIO_SPI_SELECT),
+	.AUDIO_WCLK(AUDIO_WCLK),
+	.CAMERA_I2C_SCL(CAMERA_I2C_SCL),
+	.CAMERA_I2C_SDA(CAMERA_I2C_SDA),
+	.CAMERA_PWDN_n(CAMERA_PWDN_n),
+	.DAC_DATA(DAC_DATA),
+	.DAC_SCLK(DAC_SCLK),
+	.DAC_SYNC_n(DAC_SYNC_n),
+	.DDR3_A(DDR3_A),
+	.DDR3_BA(DDR3_BA),
+	.DDR3_CAS_n(DDR3_CAS_n),
+	.DDR3_CKE(DDR3_CKE),
+	.DDR3_CK_n(DDR3_CK_n),
+	.DDR3_CK_p(DDR3_CK_p),
+	.DDR3_CS_n(DDR3_CS_n),
+	.DDR3_DM(DDR3_DM),
+	.DDR3_DQ(DDR3_DQ),
+	.DDR3_DQS_n(DDR3_DQS_n),
+	.DDR3_DQS_p(DDR3_DQS_p),
+	.DDR3_ODT(DDR3_ODT),
+	.DDR3_RAS_n(DDR3_RAS_n),
+	.DDR3_RESET_n(DDR3_RESET_n),
+	.DDR3_WE_n(DDR3_WE_n),
+	.FLASH_DATA(FLASH_DATA),
+	.FLASH_DCLK(FLASH_DCLK),
+	.FLASH_NCSO(FLASH_NCSO),
+	.FLASH_RESET_n(FLASH_RESET_n),
+	.FPGA_RESET_n(FPGA_RESET_n),
+	.GPIO(GPIO),
+	.GSENSOR_CS_n(GSENSOR_CS_n),
+	.GSENSOR_INT(GSENSOR_INT),
+	.GSENSOR_SCLK(GSENSOR_SCLK),
+	.GSENSOR_SDI(GSENSOR_SDI),
+	.GSENSOR_SDO(GSENSOR_SDO),
+	.HDMI_AP(HDMI_AP),
+	.HDMI_I2C_SCL(HDMI_I2C_SCL),
+	.HDMI_I2C_SDA(HDMI_I2C_SDA),
+	.HDMI_LRCLK(HDMI_LRCLK),
+	.HDMI_MCLK(HDMI_MCLK),
+	.HDMI_RX_CLK(HDMI_RX_CLK),
+	.HDMI_RX_D(HDMI_RX_D),
+	.HDMI_RX_DE(HDMI_RX_DE),
+	.HDMI_RX_HS(HDMI_RX_HS),
+	.HDMI_RX_INT1(HDMI_RX_INT1),
+	.HDMI_RX_RESET_n(HDMI_RX_RESET_n),
+	.HDMI_RX_VS(HDMI_RX_VS),
+	.HDMI_SCLK(HDMI_SCLK),
+	.HEX0(HEX0),
+	.HEX1(HEX1),
+	.KEY(KEY),
+	.LEDR(LEDR),
+	.LSENSOR_INT(LSENSOR_INT),
+	.LSENSOR_SCL(LSENSOR_SCL),
+	.LSENSOR_SDA(LSENSOR_SDA),
+	.MAX10_CLK1_50(MAX10_CLK1_50),
+	.MAX10_CLK2_50(MAX10_CLK2_50),
+	.MAX10_CLK3_50(MAX10_CLK3_50),
+	.MIPI_CS_n(MIPI_CS_n),
+	.MIPI_I2C_SCL(MIPI_I2C_SCL),
+	.MIPI_I2C_SDA(MIPI_I2C_SDA),
+	.MIPI_PIXEL_CLK(MIPI_PIXEL_CLK),
+	.MIPI_PIXEL_D(MIPI_PIXEL_D),
+	.MIPI_PIXEL_HS(MIPI_PIXEL_HS),
+	.MIPI_PIXEL_VS(MIPI_PIXEL_VS),
+	.MIPI_REFCLK(MIPI_REFCLK),
+	.MIPI_RESET_n(MIPI_RESET_n),
+	.MTL2_B(MTL2_B),
+	.MTL2_BL_ON_n(MTL2_BL_ON_n),
+	.MTL2_DCLK(MTL2_DCLK),
+	.MTL2_G(MTL2_G),
+	.MTL2_HSD(MTL2_HSD),
+	.MTL2_I2C_SCL(MTL2_I2C_SCL),
+	.MTL2_I2C_SDA(MTL2_I2C_SDA),
+	.MTL2_INT(MTL2_INT),
+	.MTL2_R(MTL2_R),
+	.MTL2_VSD(MTL2_VSD),
+	.NET_GTX_CLK(NET_GTX_CLK),
+	.NET_INT_n(NET_INT_n),
+	.NET_LINK100(NET_LINK100),
+	.NET_MDC(NET_MDC),
+	.NET_MDIO(NET_MDIO),
+	.NET_RST_N(NET_RST_N),
+	.NET_RX_CLK(NET_RX_CLK),
+	.NET_RX_COL(NET_RX_COL),
+	.NET_RX_CRS(NET_RX_CRS),
+	.NET_RX_D(NET_RX_D),
+	.NET_RX_DV(NET_RX_DV),
+	.NET_RX_ER(NET_RX_ER),
+	.NET_TX_CLK(NET_TX_CLK),
+	.NET_TX_D(NET_TX_D),
+	.NET_TX_EN(NET_TX_EN),
+	.NET_TX_ER(NET_TX_ER),
+	.PM_I2C_SCL(PM_I2C_SCL),
+	.PM_I2C_SDA(PM_I2C_SDA),
+	.PS2_CLK(PS2_CLK),
+	.PS2_CLK2(PS2_CLK2),
+	.PS2_DAT(PS2_DAT),
+	.PS2_DAT2(PS2_DAT2),
+	.RH_TEMP_DRDY_n(RH_TEMP_DRDY_n),
+	.RH_TEMP_I2C_SCL(RH_TEMP_I2C_SCL),
+	.RH_TEMP_I2C_SDA(RH_TEMP_I2C_SDA),
+	.SD_CLK(SD_CLK),
+	.SD_CMD(SD_CMD),
+	.SD_DATA(SD_DATA),
+	.SW(SW),
+	.UART_RESET_n(UART_RESET_n),
+	.UART_RX(UART_RX),
+	.UART_TX(UART_TX)
+);
+initial                                                
+begin                                                  
+   MAX10_CLK1_50 = 0;
+forever 
+   #10 MAX10_CLK1_50 = ~MAX10_CLK1_50;
+end   
+                                                 
+initial                                                
+begin                                                  
+   SW = 8'h0;
+   KEY = 5'b11110;
+   #1000 KEY = 5'b11111;
+end     
+endmodule
+

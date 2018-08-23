@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable filter="All Interfaces">
+  <columns>
+   <connections preferredWidth="223" />
+   <irq preferredWidth="34" />
+  </columns>
+ </systemtable>
+ <library
+   expandedCategories="Library/Basic Functions/Configuration and Programming,Library/University Program,Library/University Program/Memory,Library,Library/Basic Functions/On Chip Memory,Library/Basic Functions,Library/Memory Interfaces and Controllers,Library/Memory Interfaces and Controllers/Flash,Project" />
+ <window width="1936" height="1056" x="-8" y="-8" />
+ <hdlexample language="VERILOG" />
+ <generation block_symbol_file="0" simulation="VERILOG" path="ddr" />
+</preferences>

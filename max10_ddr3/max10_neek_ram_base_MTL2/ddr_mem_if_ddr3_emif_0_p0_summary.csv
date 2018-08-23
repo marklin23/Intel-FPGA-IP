@@ -1,0 +1,23 @@
+Core: ddr_mem_if_ddr3_emif_0_p0 - Instance: u0|mem_if_ddr3_emif_0
+Path, Setup Margin, Hold Margin
+"Address Command (Slow 1200mV 85C Model)",0.928,1.005
+"Bus Turnaround Time (Slow 1200mV 85C Model)",8.066,--
+"Core (Slow 1200mV 85C Model)",-0.715,0.16
+"Core Recovery/Removal (Slow 1200mV 85C Model)",0.708,0.88
+"DQS vs CK (Slow 1200mV 85C Model)",1.813,1.486
+"Read Capture (Slow 1200mV 85C Model)",0.145,0.145
+"Write (Slow 1200mV 85C Model)",0.0,0.059
+"Address Command (Slow 1200mV 0C Model)",0.957,0.988
+"Bus Turnaround Time (Slow 1200mV 0C Model)",8.096,--
+"Core (Slow 1200mV 0C Model)",-0.062,0.281
+"Core Recovery/Removal (Slow 1200mV 0C Model)",1.034,0.706
+"DQS vs CK (Slow 1200mV 0C Model)",1.829,1.5
+"Read Capture (Slow 1200mV 0C Model)",0.148,0.148
+"Write (Slow 1200mV 0C Model)",0.025,0.066
+"Address Command (Fast 1200mV 0C Model)",1.029,1.075
+"Bus Turnaround Time (Fast 1200mV 0C Model)",8.264,--
+"Core (Fast 1200mV 0C Model)",1.012,0.006
+"Core Recovery/Removal (Fast 1200mV 0C Model)",1.901,0.41
+"DQS vs CK (Fast 1200mV 0C Model)",1.136,1.566
+"Read Capture (Fast 1200mV 0C Model)",0.157,0.157
+"Write (Fast 1200mV 0C Model)",0.214,0.277

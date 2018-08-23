@@ -1,0 +1,349 @@
+# Reading C:/intelFPGA_lite/16.1/modelsim_ase/tcl/vsim/pref.tcl
+# do ddr_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying C:/intelFPGA_lite/16.1/modelsim_ase/win32aloem/../modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj {E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/golden_top.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:56:12 on Jul 30,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj" E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/golden_top.v 
+# -- Compiling module golden_top
+# 
+# Top level modules:
+# 	golden_top
+# End time: 15:56:13 on Jul 30,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj {E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/pll.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:56:13 on Jul 30,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj" E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/pll.v 
+# -- Compiling module pll
+# 
+# Top level modules:
+# 	pll
+# End time: 15:56:13 on Jul 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj {E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/MTL_Driver.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:56:13 on Jul 30,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj" E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/MTL_Driver.v 
+# -- Compiling module MTL_Driver
+# 
+# Top level modules:
+# 	MTL_Driver
+# End time: 15:56:13 on Jul 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/db {E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/db/pll_altpll.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:56:13 on Jul 30,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/db" E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/db/pll_altpll.v 
+# -- Compiling module pll_altpll
+# 
+# Top level modules:
+# 	pll_altpll
+# End time: 15:56:13 on Jul 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/simulation/modelsim {E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/simulation/modelsim/golden_top.vt}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:56:13 on Jul 30,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/simulation/modelsim" E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/simulation/modelsim/golden_top.vt 
+# -- Compiling module golden_top_vlg_tst
+# ** Error: (vlog-13069) E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/simulation/modelsim/golden_top.vt(355): near "forever": syntax error, unexpected forever, expecting ';'.
+# End time: 15:56:13 on Jul 30,2018, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/16.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./ddr_run_msim_rtl_verilog.do line 13
+# C:/intelFPGA_lite/16.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -vlog01compat -work work +incdir+E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/simulation/modelsim {E:/work/cloud/GFEC/02_Altera/Altera_I..."
+do ddr_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Modifying C:/intelFPGA_lite/16.1/modelsim_ase/win32aloem/../modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj {E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/golden_top.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:57:45 on Jul 30,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj" E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/golden_top.v 
+# -- Compiling module golden_top
+# 
+# Top level modules:
+# 	golden_top
+# End time: 15:57:45 on Jul 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj {E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/pll.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:57:45 on Jul 30,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj" E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/pll.v 
+# -- Compiling module pll
+# 
+# Top level modules:
+# 	pll
+# End time: 15:57:45 on Jul 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj {E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/MTL_Driver.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:57:45 on Jul 30,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj" E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/MTL_Driver.v 
+# -- Compiling module MTL_Driver
+# 
+# Top level modules:
+# 	MTL_Driver
+# End time: 15:57:46 on Jul 30,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/db {E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/db/pll_altpll.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:57:46 on Jul 30,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/db" E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/db/pll_altpll.v 
+# -- Compiling module pll_altpll
+# 
+# Top level modules:
+# 	pll_altpll
+# End time: 15:57:46 on Jul 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/simulation/modelsim {E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/simulation/modelsim/golden_top.vt}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:57:46 on Jul 30,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/simulation/modelsim" E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/simulation/modelsim/golden_top.vt 
+# -- Compiling module golden_top_vlg_tst
+# 
+# Top level modules:
+# 	golden_top_vlg_tst
+# End time: 15:57:46 on Jul 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs="+acc"  golden_top_vlg_tst
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs=""+acc"" golden_top_vlg_tst 
+# Start time: 15:57:46 on Jul 30,2018
+# Loading work.golden_top_vlg_tst
+# Loading work.golden_top
+# Loading work.pll
+# Loading altera_mf_ver.altpll
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.pll_iobuf
+# Loading work.MTL_Driver
+# Loading altera_mf_ver.MF_cycloneiii_pll
+# Loading altera_mf_ver.cda_m_cntr
+# Loading altera_mf_ver.cda_n_cntr
+# Loading altera_mf_ver.cda_scale_cntr
+# Loading C:/intelFPGA_lite/16.1/modelsim_ase/win32aloem/novas.dll
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# Loading C:\Novas\Debussy\share\PLI\modelsim_pli\WINNT\novas.dll
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+#  Note : MAX 10 PLL locked to incoming clock
+# Time: 90000  Instance: golden_top_vlg_tst.i1.pll_inst.altpll_component.cycloneiii_pll.pll3
+add wave -position insertpoint sim:/golden_top_vlg_tst/i1/MTL_Driver_inst/*
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/simulation/modelsim/wave.do
+restart
+# Loading C:/intelFPGA_lite/16.1/modelsim_ase/win32aloem/novas.dll
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# Loading C:\Novas\Debussy\share\PLI\modelsim_pli\WINNT\novas.dll
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+run -all
+#  Note : MAX 10 PLL locked to incoming clock
+# Time: 90000  Instance: golden_top_vlg_tst.i1.pll_inst.altpll_component.cycloneiii_pll.pll3
+# Paste insertion failed: wPllRstn: (vish-4014) No objects found matching 'wPllRstn'.
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/simulation/modelsim/wave.do
+vlog -vlog01compat -work work +incdir+E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj {E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/golden_top.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:01:12 on Jul 30,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj" E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/golden_top.v 
+# -- Compiling module golden_top
+# 
+# Top level modules:
+# 	golden_top
+# End time: 16:01:12 on Jul 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -vlog01compat -work work +incdir+E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj {E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/pll.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:01:12 on Jul 30,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj" E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/pll.v 
+# -- Compiling module pll
+# 
+# Top level modules:
+# 	pll
+# End time: 16:01:12 on Jul 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -vlog01compat -work work +incdir+E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj {E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/MTL_Driver.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:01:12 on Jul 30,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj" E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/MTL_Driver.v 
+# -- Compiling module MTL_Driver
+# 
+# Top level modules:
+# 	MTL_Driver
+# End time: 16:01:12 on Jul 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -vlog01compat -work work +incdir+E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/db {E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/db/pll_altpll.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:01:12 on Jul 30,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/db" E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/db/pll_altpll.v 
+# -- Compiling module pll_altpll
+# 
+# Top level modules:
+# 	pll_altpll
+# End time: 16:01:12 on Jul 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+
+vlog -vlog01compat -work work +incdir+E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/simulation/modelsim {E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/simulation/modelsim/golden_top.vt}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 16:01:13 on Jul 30,2018
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/simulation/modelsim" E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/simulation/modelsim/golden_top.vt 
+# -- Compiling module golden_top_vlg_tst
+# 
+# Top level modules:
+# 	golden_top_vlg_tst
+# End time: 16:01:13 on Jul 30,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+
+restart
+# Loading work.golden_top_vlg_tst
+# Loading work.golden_top
+# Loading work.pll
+# Loading work.MTL_Driver
+# Loading C:/intelFPGA_lite/16.1/modelsim_ase/win32aloem/novas.dll
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# Loading C:\Novas\Debussy\share\PLI\modelsim_pli\WINNT\novas.dll
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+restart
+# Loading C:/intelFPGA_lite/16.1/modelsim_ase/win32aloem/novas.dll
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# Loading C:\Novas\Debussy\share\PLI\modelsim_pli\WINNT\novas.dll
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+# ** Error (suppressible): (vsim-FLI-3155) The FLI is not enabled in this version of ModelSim.
+run -all
+# GetModuleFileName: 找不到指定的模組。
+# 
+# 
+# GetModuleFileName: 找不到指定的模組。
+# 
+# 
+#  Note : MAX 10 PLL locked to incoming clock
+# Time: 90000  Instance: golden_top_vlg_tst.i1.pll_inst.altpll_component.cycloneiii_pll.pll3
+run -all
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/simulation/modelsim/wave.do
+# End time: 00:06:46 on Jul 31,2018, Elapsed time: 8:09:00
+# Errors: 113, Warnings: 0

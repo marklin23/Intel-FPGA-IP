@@ -1,0 +1,26 @@
+source boardInit.tcl
+source systemID.tcl
+source pbPIO.tcl
+source ledPIO.tcl
+#source thermSPI.tcl
+source ocRAM.tcl
+#source byteStream.tcl
+#source jtagUart.tcl
+
+#::jtagUart::dashBoard
+#::byteStream::dashBoard
+::ocRAM::dashBoard
+#::thermSPI::dashBoard
+::ledPIO::dashBoard
+::pbPIO::dashBoard
+::systemID::dashBoard
+::boardInit::dashBoard
+
+proc myInit {} {
+    ::boardInit::init
+}
+
+proc myVal {} {
+    ::boardInit::init
+    ::systemID::init
+}

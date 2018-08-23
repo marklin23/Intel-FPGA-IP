@@ -1,0 +1,250 @@
+namespace eval systemID {
+
+    variable initialized 0
+    variable isValid 0
+    variable actualID 0
+    variable actualTS 0
+    variable expectedBase 0
+    variable expectedID 0
+    variable expectedTS 0
+    variable dash_path ""
+    variable dashboardActive 0
+
+    proc init {} {
+
+        if { ${::systemID::initialized} == 1 } {
+            ::systemID::updateDashboard
+            return -code ok "already initialized"
+        }
+
+        if { ![ namespace exists ::boardInit ] } {
+            ::systemID::updateDashboard
+            return -code error "namespace boardInit does not appear to exist"
+        }
+
+        if { ${::boardInit::initialized} == 0 } {
+            ::systemID::updateDashboard
+            return -code ok "boardInit is not initialized"
+        }
+
+        open_service master ${::boardInit::masterPath}
+        set ::systemID::actualID [ master_read_32 ${::boardInit::masterPath} [ expr ${::QSYS_HEADER::MASTER_0_SYSID_BASE} + 0 ] 1 ]
+        set ::systemID::actualTS [ master_read_32 ${::boardInit::masterPath} [ expr ${::QSYS_HEADER::MASTER_0_SYSID_BASE} + 4 ] 1 ]
+
+        set ::systemID::expectedBase    [ format "0x%08x" [ expr ${::QSYS_HEADER::MASTER_0_SYSID_BASE} ] ]
+        set ::systemID::expectedID     [ format "0x%08x" [ expr ${::QSYS_HEADER::MASTER_0_SYSID_ID} ] ]
+        set ::systemID::expectedTS     [ format "0x%08x" [ expr ${::QSYS_HEADER::MASTER_0_SYSID_TIMESTAMP} ] ]
+        
+        set ::systemID::initialized 1
+
+       if { ${::systemID::expectedID} == ${::systemID::actualID} } {
+            if { ${::systemID::expectedTS} == ${::systemID::actualTS} } {
+                set ::systemID::isValid 1
+            }
+        }
+
+        ::systemID::updateDashboard
+        return -code ok
+    }
+
+    proc dashBoard {} {
+
+        if { ${::systemID::dashboardActive} == 1 } {
+            return -code ok "dashboard already active"
+        }
+
+        set ::systemID::dashboardActive 1
+        #
+        # Create dashboard 
+        #
+        variable ::systemID::dash_path [ add_service dashboard systemID "systemID" "Tools/systemID"]
+
+        #
+        # Set dashboard properties
+        #
+        dashboard_set_property ${::systemID::dash_path} self developmentMode true
+        dashboard_set_property ${::systemID::dash_path} self itemsPerRow 1
+        dashboard_set_property ${::systemID::dash_path} self visible true
+        
+        #
+        # top group widget
+        #
+        dashboard_add ${::systemID::dash_path} topGroup group self
+        dashboard_set_property ${::systemID::dash_path} topGroup expandableX false
+        dashboard_set_property ${::systemID::dash_path} topGroup expandableY false
+        dashboard_set_property ${::systemID::dash_path} topGroup itemsPerRow 1
+        dashboard_set_property ${::systemID::dash_path} topGroup title ""
+
+        #
+        # ID group widget
+        #
+        dashboard_add ${::systemID::dash_path} IDGroup group topGroup
+        dashboard_set_property ${::systemID::dash_path} IDGroup expandableX false
+        dashboard_set_property ${::systemID::dash_path} IDGroup expandableY false
+        dashboard_set_property ${::systemID::dash_path} IDGroup itemsPerRow 2
+        dashboard_set_property ${::systemID::dash_path} IDGroup title "System ID"
+
+        #
+        # expected ID widgets
+        #
+        dashboard_add ${::systemID::dash_path} expectedIDGroup group IDGroup 
+        dashboard_set_property ${::systemID::dash_path} expectedIDGroup expandableX false
+        dashboard_set_property ${::systemID::dash_path} expectedIDGroup expandableY false
+        dashboard_set_property ${::systemID::dash_path} expectedIDGroup itemsPerRow 1
+        dashboard_set_property ${::systemID::dash_path} expectedIDGroup title "Expected ID"
+
+        dashboard_add ${::systemID::dash_path} expectedIDText text expectedIDGroup 
+        dashboard_set_property ${::systemID::dash_path} expectedIDText expandableX false
+        dashboard_set_property ${::systemID::dash_path} expectedIDText expandableY false
+        dashboard_set_property ${::systemID::dash_path} expectedIDText preferredWidth 150
+        dashboard_set_property ${::systemID::dash_path} expectedIDText editable false
+        dashboard_set_property ${::systemID::dash_path} expectedIDText htmlCapable false
+        dashboard_set_property ${::systemID::dash_path} expectedIDText text ${::systemID::expectedID}
+
+        #
+        # actual ID widgets
+        #
+        dashboard_add ${::systemID::dash_path} actualIDGroup group IDGroup 
+        dashboard_set_property ${::systemID::dash_path} actualIDGroup expandableX false
+        dashboard_set_property ${::systemID::dash_path} actualIDGroup expandableY false
+        dashboard_set_property ${::systemID::dash_path} actualIDGroup itemsPerRow 1
+        dashboard_set_property ${::systemID::dash_path} actualIDGroup title "Actual ID"
+
+        dashboard_add ${::systemID::dash_path} actualIDText text actualIDGroup 
+        dashboard_set_property ${::systemID::dash_path} actualIDText expandableX false
+        dashboard_set_property ${::systemID::dash_path} actualIDText expandableY false
+        dashboard_set_property ${::systemID::dash_path} actualIDText preferredWidth 150
+        dashboard_set_property ${::systemID::dash_path} actualIDText editable false
+        dashboard_set_property ${::systemID::dash_path} actualIDText htmlCapable false
+        dashboard_set_property ${::systemID::dash_path} actualIDText text ${::systemID::actualID}
+
+        #
+        # TS group widget
+        #
+        dashboard_add ${::systemID::dash_path} TSGroup group topGroup
+        dashboard_set_property ${::systemID::dash_path} TSGroup expandableX false
+        dashboard_set_property ${::systemID::dash_path} TSGroup expandableY false
+        dashboard_set_property ${::systemID::dash_path} TSGroup itemsPerRow 2
+        dashboard_set_property ${::systemID::dash_path} TSGroup title "System Timestamp"
+
+        #
+        # expected TS widgets
+        #
+        dashboard_add ${::systemID::dash_path} expectedTSGroup group TSGroup 
+        dashboard_set_property ${::systemID::dash_path} expectedTSGroup expandableX false
+        dashboard_set_property ${::systemID::dash_path} expectedTSGroup expandableY false
+        dashboard_set_property ${::systemID::dash_path} expectedTSGroup itemsPerRow 1
+        dashboard_set_property ${::systemID::dash_path} expectedTSGroup title "Expected TS"
+
+        dashboard_add ${::systemID::dash_path} expectedTSText text expectedTSGroup 
+        dashboard_set_property ${::systemID::dash_path} expectedTSText expandableX false
+        dashboard_set_property ${::systemID::dash_path} expectedTSText expandableY false
+        dashboard_set_property ${::systemID::dash_path} expectedTSText preferredWidth 150
+        dashboard_set_property ${::systemID::dash_path} expectedTSText editable false
+        dashboard_set_property ${::systemID::dash_path} expectedTSText htmlCapable false
+        dashboard_set_property ${::systemID::dash_path} expectedTSText text ${::systemID::expectedTS}
+
+        #
+        # actual TS widgets
+        #
+        dashboard_add ${::systemID::dash_path} actualTSGroup group TSGroup 
+        dashboard_set_property ${::systemID::dash_path} actualTSGroup expandableX false
+        dashboard_set_property ${::systemID::dash_path} actualTSGroup expandableY false
+        dashboard_set_property ${::systemID::dash_path} actualTSGroup itemsPerRow 1
+        dashboard_set_property ${::systemID::dash_path} actualTSGroup title "Actual TS"
+
+        dashboard_add ${::systemID::dash_path} actualTSText text actualTSGroup 
+        dashboard_set_property ${::systemID::dash_path} actualTSText expandableX false
+        dashboard_set_property ${::systemID::dash_path} actualTSText expandableY false
+        dashboard_set_property ${::systemID::dash_path} actualTSText preferredWidth 150
+        dashboard_set_property ${::systemID::dash_path} actualTSText editable false
+        dashboard_set_property ${::systemID::dash_path} actualTSText htmlCapable false
+        dashboard_set_property ${::systemID::dash_path} actualTSText text ${::systemID::actualTS}
+
+        #
+        # base address group widget
+        #
+        dashboard_add ${::systemID::dash_path} baseGroup group topGroup
+        dashboard_set_property ${::systemID::dash_path} baseGroup expandableX false
+        dashboard_set_property ${::systemID::dash_path} baseGroup expandableY false
+        dashboard_set_property ${::systemID::dash_path} baseGroup itemsPerRow 1
+        dashboard_set_property ${::systemID::dash_path} baseGroup title "Base Address"
+
+        #
+        # base address widgets
+        #
+        dashboard_add ${::systemID::dash_path} baseText text baseGroup 
+        dashboard_set_property ${::systemID::dash_path} baseText expandableX false
+        dashboard_set_property ${::systemID::dash_path} baseText expandableY false
+        dashboard_set_property ${::systemID::dash_path} baseText preferredWidth 150
+        dashboard_set_property ${::systemID::dash_path} baseText editable false
+        dashboard_set_property ${::systemID::dash_path} baseText htmlCapable false
+        dashboard_set_property ${::systemID::dash_path} baseText text ${::systemID::expectedBase}
+
+        #
+        # status group widget
+        #
+        dashboard_add ${::systemID::dash_path} statusGroup group topGroup
+        dashboard_set_property ${::systemID::dash_path} statusGroup expandableX false
+        dashboard_set_property ${::systemID::dash_path} statusGroup expandableY false
+        dashboard_set_property ${::systemID::dash_path} statusGroup itemsPerRow 2
+        dashboard_set_property ${::systemID::dash_path} statusGroup title ""
+
+        #
+        # isValid widget
+        #
+        dashboard_add ${::systemID::dash_path} isValidGroup group statusGroup 
+        dashboard_set_property ${::systemID::dash_path} isValidGroup expandableX false
+        dashboard_set_property ${::systemID::dash_path} isValidGroup expandableY false
+        dashboard_set_property ${::systemID::dash_path} isValidGroup itemsPerRow 2
+        dashboard_set_property ${::systemID::dash_path} isValidGroup title "Status"
+
+        dashboard_add ${::systemID::dash_path} isValidLED led isValidGroup 
+        dashboard_set_property ${::systemID::dash_path} isValidLED expandableX false
+        dashboard_set_property ${::systemID::dash_path} isValidLED expandableY false
+        dashboard_set_property ${::systemID::dash_path} isValidLED text "Valid"
+        dashboard_set_property ${::systemID::dash_path} isValidLED color "green_off"
+
+        #
+        # init button widget
+        #
+        dashboard_add ${::systemID::dash_path} initButton button statusGroup 
+        dashboard_set_property ${::systemID::dash_path} initButton enabled true
+        dashboard_set_property ${::systemID::dash_path} initButton expandableY false
+        dashboard_set_property ${::systemID::dash_path} initButton expandableY false
+        dashboard_set_property ${::systemID::dash_path} initButton text "Initialize"
+        dashboard_set_property ${::systemID::dash_path} initButton onClick ::systemID::init
+
+        ::systemID::init
+
+        return -code ok
+    }
+    
+    proc updateDashboard {} {
+
+        if { ${::systemID::dashboardActive} > 0 } {
+
+            if { ${::systemID::initialized} > 0 } {
+                dashboard_set_property ${::systemID::dash_path} initButton enabled false
+                dashboard_set_property ${::systemID::dash_path} expectedIDText text ${::systemID::expectedID}
+                dashboard_set_property ${::systemID::dash_path} actualIDText text ${::systemID::actualID}
+                dashboard_set_property ${::systemID::dash_path} expectedTSText text ${::systemID::expectedTS}
+                dashboard_set_property ${::systemID::dash_path} actualTSText text ${::systemID::actualTS}
+                dashboard_set_property ${::systemID::dash_path} baseText text ${::systemID::expectedBase}
+                if { ${::systemID::isValid} > 0 } {
+                    dashboard_set_property ${::systemID::dash_path} isValidLED color "green"
+                } else {
+                    dashboard_set_property ${::systemID::dash_path} isValidLED color "red"
+                }
+            } else {
+                dashboard_set_property ${::systemID::dash_path} initButton enabled true
+                dashboard_set_property ${::systemID::dash_path} expectedIDText text "uninitialized"
+                dashboard_set_property ${::systemID::dash_path} actualIDText text "uninitialized"
+                dashboard_set_property ${::systemID::dash_path} expectedTSText text "uninitialized"
+                dashboard_set_property ${::systemID::dash_path} actualTSText text "uninitialized"
+                dashboard_set_property ${::systemID::dash_path} baseText text "uninitialized"
+                dashboard_set_property ${::systemID::dash_path} isValidLED color "green_off"
+            }
+        }
+    }
+}

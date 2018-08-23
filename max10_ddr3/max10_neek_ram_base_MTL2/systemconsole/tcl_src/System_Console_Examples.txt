@@ -1,0 +1,29 @@
+# Sample System Console commands
+
+# Setup service path variable
+set mm [ lindex [ get_service_paths master ] 0 ] 
+
+# Open service path
+open_service master $mm
+
+# Read base 0x0 8 locations
+master_read_32 $mm 0x0 8
+
+# Read base 0x420 1 location, LED status
+master_read_32 $mm 0x420 1
+
+# Write base 0x420 0XFF, LEDs off
+master_write_32 $mm 0x420 0xFF
+
+# Write base 0x420 0XFF, LEDs on
+master_write_32 $mm 0x420 0x00
+
+
+# first_nios2_project
+set nios [ lindex [ get_service_paths master ] 1 ] 
+master_read_32 $mm 0x11020 1
+master_read_32 $mm 0x11030 1
+master_write_32 $mm 0x11020 0xFF
+
+# Close service path
+close_service master $mm

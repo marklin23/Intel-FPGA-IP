@@ -1,0 +1,45 @@
+set_global_assignment -entity "unnamed" -library "unnamed" -name IP_TOOL_NAME "Qsys"
+set_global_assignment -entity "unnamed" -library "unnamed" -name IP_TOOL_VERSION "16.1"
+set_global_assignment -entity "unnamed" -library "unnamed" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -library "unnamed" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../../../../Altera_DemoBoard/MAX10 NEEK/Demonstrations/sdcard_audio/unnamed.sopcinfo"]
+set_global_assignment -entity "unnamed" -library "unnamed" -name SLD_INFO "QSYS_NAME unnamed HAS_SOPCINFO 1 GENERATION_ID 1532955929"
+set_global_assignment -library "unnamed" -name MISC_FILE [file join $::quartus(qip_path) "../unnamed.cmp"]
+set_global_assignment -library "unnamed" -name SLD_FILE [file join $::quartus(qip_path) "unnamed.debuginfo"]
+set_global_assignment -entity "unnamed" -library "unnamed" -name IP_TARGETED_DEVICE_FAMILY "MAX 10"
+set_global_assignment -entity "unnamed" -library "unnamed" -name IP_GENERATED_DEVICE_FAMILY "{MAX 10}"
+set_global_assignment -entity "unnamed" -library "unnamed" -name IP_QSYS_MODE "STANDALONE"
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON
+set_global_assignment -library "unnamed" -name MISC_FILE [file join $::quartus(qip_path) "../../../../../Altera_DemoBoard/MAX10 NEEK/Demonstrations/sdcard_audio/unnamed.qsys"]
+set_global_assignment -entity "unnamed" -library "unnamed" -name IP_COMPONENT_NAME "dW5uYW1lZA=="
+set_global_assignment -entity "unnamed" -library "unnamed" -name IP_COMPONENT_DISPLAY_NAME "dW5uYW1lZA=="
+set_global_assignment -entity "unnamed" -library "unnamed" -name IP_COMPONENT_REPORT_HIERARCHY "On"
+set_global_assignment -entity "unnamed" -library "unnamed" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "unnamed" -library "unnamed" -name IP_COMPONENT_VERSION "MS4w"
+set_global_assignment -entity "unnamed" -library "unnamed" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTUzMjk1NTkyOQ==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "unnamed" -library "unnamed" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::TUFYIDEw::QXV0byBERVZJQ0VfRkFNSUxZ"
+set_global_assignment -entity "unnamed" -library "unnamed" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::MTBNNTBEQUY0ODRDNkdFUw==::QXV0byBERVZJQ0U="
+set_global_assignment -entity "unnamed" -library "unnamed" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::Ng==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="
+set_global_assignment -entity "unnamed" -library "unnamed" -name IP_COMPONENT_PARAMETER "QVVUT19DTEtfQ0xPQ0tfUkFURQ==::LTE=::QXV0byBDTE9DS19SQVRF"
+set_global_assignment -entity "unnamed" -library "unnamed" -name IP_COMPONENT_PARAMETER "QVVUT19DTEtfQ0xPQ0tfRE9NQUlO::LTE=::QXV0byBDTE9DS19ET01BSU4="
+set_global_assignment -entity "unnamed" -library "unnamed" -name IP_COMPONENT_PARAMETER "QVVUT19DTEtfUkVTRVRfRE9NQUlO::LTE=::QXV0byBSRVNFVF9ET01BSU4="
+set_global_assignment -entity "Altera_UP_SD_Card_Avalon_Interface" -library "unnamed" -name IP_COMPONENT_NAME "QWx0ZXJhX1VQX1NEX0NhcmRfQXZhbG9uX0ludGVyZmFjZQ=="
+set_global_assignment -entity "Altera_UP_SD_Card_Avalon_Interface" -library "unnamed" -name IP_COMPONENT_DISPLAY_NAME "U0QgQ2FyZCBJbnRlcmZhY2U="
+set_global_assignment -entity "Altera_UP_SD_Card_Avalon_Interface" -library "unnamed" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "Altera_UP_SD_Card_Avalon_Interface" -library "unnamed" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "Altera_UP_SD_Card_Avalon_Interface" -library "unnamed" -name IP_COMPONENT_VERSION "MTYuMQ=="
+set_global_assignment -entity "Altera_UP_SD_Card_Avalon_Interface" -library "unnamed" -name IP_COMPONENT_DESCRIPTION "QSBtb2R1bGUgdGhhdCBhbGxvd3MgY29tbXVuaWNhdGlvbiB3aXRoIGFuIFNEIENhcmQ="
+set_global_assignment -entity "Altera_UP_SD_Card_Avalon_Interface" -library "unnamed" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::TUFYIDEw::QXV0byBERVZJQ0VfRkFNSUxZ"
+set_global_assignment -entity "Altera_UP_SD_Card_Avalon_Interface" -library "unnamed" -name IP_COMPONENT_PARAMETER "QVVUT19DTEtfQ0xPQ0tfUkFURQ==::MA==::QXV0byBDTE9DS19SQVRF"
+
+set_global_assignment -library "unnamed" -name VERILOG_FILE [file join $::quartus(qip_path) "unnamed.v"]
+set_global_assignment -library "unnamed" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/Altera_UP_SD_Card_Avalon_Interface.vhd"]
+set_global_assignment -library "unnamed" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/Altera_UP_SD_Card_48_bit_Command_Generator.vhd"]
+set_global_assignment -library "unnamed" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/Altera_UP_SD_Card_Buffer.vhd"]
+set_global_assignment -library "unnamed" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/Altera_UP_SD_Card_Clock.vhd"]
+set_global_assignment -library "unnamed" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/Altera_UP_SD_Card_Control_FSM.vhd"]
+set_global_assignment -library "unnamed" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/Altera_UP_SD_Card_Interface.vhd"]
+set_global_assignment -library "unnamed" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/Altera_UP_SD_Card_Response_Receiver.vhd"]
+set_global_assignment -library "unnamed" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/Altera_UP_SD_CRC16_Generator.vhd"]
+set_global_assignment -library "unnamed" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/Altera_UP_SD_CRC7_Generator.vhd"]
+set_global_assignment -library "unnamed" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/Altera_UP_SD_Signal_Trigger.vhd"]
+set_global_assignment -library "unnamed" -name VHDL_FILE [file join $::quartus(qip_path) "submodules/Altera_UP_SD_Card_Memory_Block.vhd"]

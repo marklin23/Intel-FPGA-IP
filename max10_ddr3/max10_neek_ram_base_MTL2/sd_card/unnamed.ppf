@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pinplan
+ variation_name="Altera_UP_SD_Card_Avalon_Interface_0"
+ megafunction_name="ALTERA_UP_SD_CARD_AVALON_INTERFACE"
+ intended_family="MAX 10"
+ specifies="all_ports">
+ <global>
+  <pin name="i_avalon_chip_select" direction="input" scope="external" />
+  <pin name="i_avalon_address[7..0]" direction="input" scope="external" />
+  <pin name="i_avalon_read" direction="input" scope="external" />
+  <pin name="i_avalon_write" direction="input" scope="external" />
+  <pin name="i_avalon_byteenable[3..0]" direction="input" scope="external" />
+  <pin name="i_avalon_writedata[31..0]" direction="input" scope="external" />
+  <pin name="o_avalon_readdata[31..0]" direction="output" scope="external" />
+  <pin name="o_avalon_waitrequest" direction="output" scope="external" />
+  <pin name="i_clock" direction="input" scope="external" />
+  <pin name="i_reset_n" direction="input" scope="external" />
+  <pin name="b_SD_cmd" direction="bidir" scope="external" />
+  <pin name="b_SD_dat" direction="bidir" scope="external" />
+  <pin name="b_SD_dat3" direction="bidir" scope="external" />
+  <pin name="o_SD_clock" direction="output" scope="external" />
+ </global>
+</pinplan>

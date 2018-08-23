@@ -1,0 +1,121 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/simulation/modelsim
+vgolden_top
+Z1 !s110 1532937672
+!i10b 1
+!s100 F3B08mTj35LRU2`3<h_f23
+I`NRgh17mMRSR:0a<m:2^m1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1532936959
+8E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/golden_top.v
+FE:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/golden_top.v
+L0 60
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1532937672.000000
+!s107 E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/golden_top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj|E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/golden_top.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj
+Z7 tCvgOpt 0
+vgolden_top_vlg_tst
+!s110 1532937673
+!i10b 1
+!s100 ckNG^M_bJloWX:QI<iK`d1
+IDa2YHILC1N3PmlK?mROJ30
+R2
+R0
+w1532937655
+8E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/simulation/modelsim/golden_top.vt
+FE:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/simulation/modelsim/golden_top.vt
+L0 29
+R3
+r1
+!s85 0
+31
+!s108 1532937673.000000
+!s107 E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/simulation/modelsim/golden_top.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/simulation/modelsim|E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/simulation/modelsim/golden_top.vt|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/simulation/modelsim
+R7
+vMTL_Driver
+R1
+!i10b 1
+!s100 1Z:ELF?P^;WbgB<F<P;X53
+IK`g9kY0gDaY1g`kDi8[?K0
+R2
+R0
+w1532937028
+8E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/MTL_Driver.v
+FE:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/MTL_Driver.v
+L0 68
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/MTL_Driver.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj|E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/MTL_Driver.v|
+!i113 1
+R5
+R6
+R7
+n@m@t@l_@driver
+vpll
+R1
+!i10b 1
+!s100 `bJ>BZR5Eda3CISn8ISl:0
+IQ4KPzkGldH;Ceo2717aAN3
+R2
+R0
+w1532931921
+8E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/pll.v
+FE:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/pll.v
+L0 40
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/pll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj|E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/pll.v|
+!i113 1
+R5
+R6
+R7
+vpll_altpll
+R1
+!i10b 1
+!s100 zKU2HnVS9T9QBS]W1Za8>1
+IaU2LoiZ^;>iToAAiNL>ka2
+R2
+R0
+w1532936998
+8E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/db/pll_altpll.v
+FE:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/db/pll_altpll.v
+L0 31
+R3
+r1
+!s85 0
+31
+R4
+!s107 E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/db/pll_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/db|E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/db/pll_altpll.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/db
+R7

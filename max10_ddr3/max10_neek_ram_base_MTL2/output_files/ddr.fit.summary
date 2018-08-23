@@ -1,0 +1,18 @@
+Fitter Status : Successful - Thu Aug 09 14:07:21 2018
+Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+Revision Name : ddr
+Top-level Entity Name : golden_top
+Family : MAX 10
+Device : 10M50DAF484C6GES
+Timing Models : Preliminary
+Total logic elements : 3,341 / 49,760 ( 7 % )
+    Total combinational functions : 1,533 / 49,760 ( 3 % )
+    Dedicated logic registers : 2,927 / 49,760 ( 6 % )
+Total registers : 2927
+Total pins : 225 / 360 ( 63 % )
+Total virtual pins : 0
+Total memory bits : 958,464 / 1,677,312 ( 57 % )
+Embedded Multiplier 9-bit elements : 0 / 288 ( 0 % )
+Total PLLs : 1 / 4 ( 25 % )
+UFM blocks : 0 / 1 ( 0 % )
+ADC blocks : 0 / 2 ( 0 % )

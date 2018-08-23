@@ -1,0 +1,280 @@
+Info: Starting: Create simulation model
+Info: qsys-generate E:\work\cloud\GFEC\02_Altera\Altera_IP\ddr\max10_proj\ddr\ddr.qsys --simulation=VERILOG --allow-mixed-language-simulation --output-directory=E:\work\cloud\GFEC\02_Altera\Altera_IP\ddr\max10_proj\ddr\ddr\simulation --family="MAX 10" --part=10M50DAF484C6GES
+Progress: Loading ddr/ddr.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 16.1]
+Progress: Parameterizing module clk_0
+Progress: Adding dma_0 [altera_avalon_dma 16.1]
+Progress: Parameterizing module dma_0
+Progress: Adding master_0 [altera_jtag_avalon_master 16.1]
+Progress: Parameterizing module master_0
+Progress: Adding mem_if_ddr3_emif_0 [altera_mem_if_ddr3_emif 16.1]
+Progress: Parameterizing module mem_if_ddr3_emif_0
+Progress: Adding mm_bridge_0 [altera_avalon_mm_bridge 16.1]
+Progress: Parameterizing module mm_bridge_0
+Progress: Adding mm_master_bfm_0 [altera_avalon_mm_master_bfm 16.1]
+Info: altera_avalon_mm_master_bfm: Preferred Simulation Language is set to None.
+Progress: Parameterizing module mm_master_bfm_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 16.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding pio_0 [altera_avalon_pio 16.1]
+Progress: Parameterizing module pio_0
+Progress: Adding sysid_qsys_0 [altera_avalon_sysid_qsys 16.1]
+Progress: Parameterizing module sysid_qsys_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: ddr.dma_0: DMA Controller will only be supported in Quartus Prime Standard Edition in the future release.
+Warning: ddr.mem_if_ddr3_emif_0.pll_bridge: pll_bridge.pll_sharing cannot be both connected and exported
+Info: ddr.sysid_qsys_0: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: ddr.sysid_qsys_0: Time stamp will be automatically updated when this component is generated.
+Warning: ddr.dma_0: Interrupt sender dma_0.irq is not connected to an interrupt receiver
+Warning: ddr.: You have exported the interface mm_bridge_0.s0 but not its associated clock interface.  Export the driver of mm_bridge_0.clk
+Info: ddr: Generating ddr "ddr" for SIM_VERILOG
+Info: dma_0: softresetEnable = 1
+Info: dma_0: Starting RTL generation for module 'ddr_dma_0'
+Info: dma_0:   Generation command is [exec C:/intelFPGA_lite/16.1/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/16.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_dma -- C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_dma/generate_rtl.pl --name=ddr_dma_0 --dir=C:/Users/markl/AppData/Local/Temp/alt7742_3215356986853019399.dir/0271_dma_0_gen/ --quartus_dir=C:/intelfpga_lite/16.1/quartus --verilog --config=C:/Users/markl/AppData/Local/Temp/alt7742_3215356986853019399.dir/0271_dma_0_gen//ddr_dma_0_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/markl/AppData/Local/Temp/alt7742_3215356986853019399.dir/0271_dma_0_gen/  ]
+Info: dma_0: # 2018.07.31 10:05:46 (*)   ddr_dma_0: allowing these transactions: doubleword, word, hw, byte_access
+Info: dma_0: Done RTL generation for module 'ddr_dma_0'
+Info: dma_0: "ddr" instantiated altera_avalon_dma "dma_0"
+Info: master_0: "ddr" instantiated altera_jtag_avalon_master "master_0"
+Info: mem_if_ddr3_emif_0: "ddr" instantiated altera_mem_if_ddr3_emif "mem_if_ddr3_emif_0"
+Info: mm_bridge_0: "ddr" instantiated altera_avalon_mm_bridge "mm_bridge_0"
+Info: mm_master_bfm_0: "ddr" instantiated altera_avalon_mm_master_bfm "mm_master_bfm_0"
+Info: onchip_memory2_0: Starting RTL generation for module 'ddr_onchip_memory2_0'
+Info: onchip_memory2_0:   Generation command is [exec C:/intelfpga_lite/16.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/16.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=ddr_onchip_memory2_0 --dir=C:/Users/markl/AppData/Local/Temp/alt7742_3215356986853019399.dir/0274_onchip_memory2_0_gen/ --quartus_dir=C:/intelfpga_lite/16.1/quartus --verilog --config=C:/Users/markl/AppData/Local/Temp/alt7742_3215356986853019399.dir/0274_onchip_memory2_0_gen//ddr_onchip_memory2_0_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/markl/AppData/Local/Temp/alt7742_3215356986853019399.dir/0274_onchip_memory2_0_gen/  ]
+Info: onchip_memory2_0: Done RTL generation for module 'ddr_onchip_memory2_0'
+Info: onchip_memory2_0: "ddr" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
+Info: pio_0: Starting RTL generation for module 'ddr_pio_0'
+Info: pio_0:   Generation command is [exec C:/intelfpga_lite/16.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/16.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=ddr_pio_0 --dir=C:/Users/markl/AppData/Local/Temp/alt7742_3215356986853019399.dir/0275_pio_0_gen/ --quartus_dir=C:/intelfpga_lite/16.1/quartus --verilog --config=C:/Users/markl/AppData/Local/Temp/alt7742_3215356986853019399.dir/0275_pio_0_gen//ddr_pio_0_component_configuration.pl  --do_build_sim=1    --sim_dir=C:/Users/markl/AppData/Local/Temp/alt7742_3215356986853019399.dir/0275_pio_0_gen/  ]
+Info: pio_0: Done RTL generation for module 'ddr_pio_0'
+Info: pio_0: "ddr" instantiated altera_avalon_pio "pio_0"
+Info: sysid_qsys_0: "ddr" instantiated altera_avalon_sysid_qsys "sysid_qsys_0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "ddr" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: rst_controller: "ddr" instantiated altera_reset_controller "rst_controller"
+Info: jtag_phy_embedded_in_jtag_master: "master_0" instantiated altera_jtag_dc_streaming "jtag_phy_embedded_in_jtag_master"
+Info: timing_adt: "master_0" instantiated timing_adapter "timing_adt"
+Info: fifo: "master_0" instantiated altera_avalon_sc_fifo "fifo"
+Info: b2p: "master_0" instantiated altera_avalon_st_bytes_to_packets "b2p"
+Info: p2b: "master_0" instantiated altera_avalon_st_packets_to_bytes "p2b"
+Info: transacto: "master_0" instantiated altera_avalon_packets_to_master "transacto"
+Info: b2p_adapter: "master_0" instantiated channel_adapter "b2p_adapter"
+Info: p2b_adapter: "master_0" instantiated channel_adapter "p2b_adapter"
+Info: pll0: "mem_if_ddr3_emif_0" instantiated altera_mem_if_ddr3_pll "pll0"
+Info: p0: Generating clock pair generator
+Info: p0: Generating altgpio
+Info: p0: "mem_if_ddr3_emif_0" instantiated altera_mem_if_ddr3_phy_core "p0"
+Info: m0: "mem_if_ddr3_emif_0" instantiated altera_mem_if_ddr3_afi_mux "m0"
+Info: s0: Generating Qsys sequencer system
+Info: s0: QSYS sequencer system generated successfully
+Info: s0: "mem_if_ddr3_emif_0" instantiated altera_mem_if_ddr3_qseq "s0"
+Info: Reusing file E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/ddr/ddr/simulation/submodules/altera_avalon_sc_fifo.v
+Info: c0: "mem_if_ddr3_emif_0" instantiated altera_mem_if_nextgen_ddr3_controller "c0"
+Info: mm_master_bfm_0_m0_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "mm_master_bfm_0_m0_translator"
+Info: Reusing file E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/ddr/ddr/simulation/submodules/altera_merlin_master_translator.sv
+Info: mem_if_ddr3_emif_0_avl_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "mem_if_ddr3_emif_0_avl_translator"
+Info: Reusing file E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/ddr/ddr/simulation/submodules/altera_merlin_slave_translator.sv
+Info: mm_master_bfm_0_m0_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "mm_master_bfm_0_m0_agent"
+Info: Reusing file E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/ddr/ddr/simulation/submodules/altera_merlin_master_agent.sv
+Info: mem_if_ddr3_emif_0_avl_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "mem_if_ddr3_emif_0_avl_agent"
+Info: Reusing file E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/ddr/ddr/simulation/submodules/altera_merlin_slave_agent.sv
+Info: Reusing file E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/ddr/ddr/simulation/submodules/altera_merlin_burst_uncompressor.sv
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_003: "mm_interconnect_0" instantiated altera_merlin_router "router_003"
+Info: router_004: "mm_interconnect_0" instantiated altera_merlin_router "router_004"
+Info: router_005: "mm_interconnect_0" instantiated altera_merlin_router "router_005"
+Info: router_006: "mm_interconnect_0" instantiated altera_merlin_router "router_006"
+Info: router_009: "mm_interconnect_0" instantiated altera_merlin_router "router_009"
+Info: mm_master_bfm_0_m0_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "mm_master_bfm_0_m0_limiter"
+Info: Reusing file E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/ddr/ddr/simulation/submodules/altera_avalon_sc_fifo.v
+Info: Reusing file E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/ddr/ddr/simulation/submodules/altera_avalon_st_pipeline_base.v
+Info: dma_0_control_port_slave_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "dma_0_control_port_slave_burst_adapter"
+Info: Reusing file E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/ddr/ddr/simulation/submodules/altera_avalon_st_pipeline_stage.sv
+Info: Reusing file E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/ddr/ddr/simulation/submodules/altera_avalon_st_pipeline_base.v
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_demux_003: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_003"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: Reusing file E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/ddr/ddr/simulation/submodules/altera_merlin_arbitrator.sv
+Info: cmd_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_001"
+Info: Reusing file E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/ddr/ddr/simulation/submodules/altera_merlin_arbitrator.sv
+Info: cmd_mux_004: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_004"
+Info: Reusing file E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/ddr/ddr/simulation/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_001"
+Info: rsp_demux_004: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_004"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/ddr/ddr/simulation/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux_003: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_003"
+Info: Reusing file E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/ddr/ddr/simulation/submodules/altera_merlin_arbitrator.sv
+Info: mm_master_bfm_0_m0_to_mem_if_ddr3_emif_0_avl_cmd_width_adapter: "mm_interconnect_0" instantiated altera_merlin_width_adapter "mm_master_bfm_0_m0_to_mem_if_ddr3_emif_0_avl_cmd_width_adapter"
+Info: Reusing file E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/ddr/ddr/simulation/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/ddr/ddr/simulation/submodules/altera_merlin_burst_uncompressor.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: avalon_st_adapter_001: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter_001"
+Info: ng0: "c0" instantiated altera_mem_if_nextgen_ddr3_controller_core "ng0"
+Info: a0: "c0" instantiated alt_mem_ddrx_mm_st_converter "a0"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: error_adapter_0: "avalon_st_adapter_001" instantiated error_adapter "error_adapter_0"
+Info: ddr: Done "ddr" with 53 modules, 171 files
+Info: qsys-generate succeeded.
+Info: Finished: Create simulation model
+Info: Starting: Create Modelsim Project.
+Info: sim-script-gen --spd=E:\work\cloud\GFEC\02_Altera\Altera_IP\ddr\max10_proj\ddr\ddr\ddr.spd --output-directory=E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/ddr/ddr/simulation/ --use-relative-paths=true
+Info: Doing: ip-make-simscript --spd=E:\work\cloud\GFEC\02_Altera\Altera_IP\ddr\max10_proj\ddr\ddr\ddr.spd --output-directory=E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/ddr/ddr/simulation/ --use-relative-paths=true
+Info: Generating the following file(s) for MODELSIM simulator in E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/ddr/ddr/simulation/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Generating the following file(s) for VCS simulator in E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/ddr/ddr/simulation/ directory:
+Info: 	synopsys/vcs/vcs_setup.sh
+Info: Generating the following file(s) for VCSMX simulator in E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/ddr/ddr/simulation/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/ddr/ddr/simulation/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: 	52 .cds.lib files in cadence/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERA simulator in E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/ddr/ddr/simulation/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/ddr/ddr/simulation/.
+Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
+Info: Finished: Create Modelsim Project.
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate E:\work\cloud\GFEC\02_Altera\Altera_IP\ddr\max10_proj\ddr\ddr.qsys --synthesis=VERILOG --output-directory=E:\work\cloud\GFEC\02_Altera\Altera_IP\ddr\max10_proj\ddr\ddr\synthesis --family="MAX 10" --part=10M50DAF484C6GES
+Progress: Loading ddr/ddr.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 16.1]
+Progress: Parameterizing module clk_0
+Progress: Adding dma_0 [altera_avalon_dma 16.1]
+Progress: Parameterizing module dma_0
+Progress: Adding master_0 [altera_jtag_avalon_master 16.1]
+Progress: Parameterizing module master_0
+Progress: Adding mem_if_ddr3_emif_0 [altera_mem_if_ddr3_emif 16.1]
+Progress: Parameterizing module mem_if_ddr3_emif_0
+Progress: Adding mm_bridge_0 [altera_avalon_mm_bridge 16.1]
+Progress: Parameterizing module mm_bridge_0
+Progress: Adding mm_master_bfm_0 [altera_avalon_mm_master_bfm 16.1]
+Progress: Parameterizing module mm_master_bfm_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 16.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding pio_0 [altera_avalon_pio 16.1]
+Progress: Parameterizing module pio_0
+Progress: Adding sysid_qsys_0 [altera_avalon_sysid_qsys 16.1]
+Progress: Parameterizing module sysid_qsys_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: ddr.dma_0: DMA Controller will only be supported in Quartus Prime Standard Edition in the future release.
+Warning: ddr.mem_if_ddr3_emif_0.pll_bridge: pll_bridge.pll_sharing cannot be both connected and exported
+Info: ddr.sysid_qsys_0: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: ddr.sysid_qsys_0: Time stamp will be automatically updated when this component is generated.
+Warning: ddr.dma_0: Interrupt sender dma_0.irq is not connected to an interrupt receiver
+Warning: ddr.: You have exported the interface mm_bridge_0.s0 but not its associated clock interface.  Export the driver of mm_bridge_0.clk
+Info: ddr: Generating ddr "ddr" for QUARTUS_SYNTH
+Info: dma_0: softresetEnable = 1
+Info: dma_0: Starting RTL generation for module 'ddr_dma_0'
+Info: dma_0:   Generation command is [exec C:/intelFPGA_lite/16.1/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/16.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_dma -- C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_dma/generate_rtl.pl --name=ddr_dma_0 --dir=C:/Users/markl/AppData/Local/Temp/alt7742_3215356986853019399.dir/0318_dma_0_gen/ --quartus_dir=C:/intelfpga_lite/16.1/quartus --verilog --config=C:/Users/markl/AppData/Local/Temp/alt7742_3215356986853019399.dir/0318_dma_0_gen//ddr_dma_0_component_configuration.pl  --do_build_sim=0  ]
+Info: dma_0: # 2018.07.31 10:07:47 (*)   ddr_dma_0: allowing these transactions: doubleword, word, hw, byte_access
+Info: dma_0: Done RTL generation for module 'ddr_dma_0'
+Info: dma_0: "ddr" instantiated altera_avalon_dma "dma_0"
+Info: master_0: "ddr" instantiated altera_jtag_avalon_master "master_0"
+Info: mem_if_ddr3_emif_0: "ddr" instantiated altera_mem_if_ddr3_emif "mem_if_ddr3_emif_0"
+Info: mm_bridge_0: "ddr" instantiated altera_avalon_mm_bridge "mm_bridge_0"
+Info: mm_master_bfm_0: "ddr" instantiated altera_avalon_mm_master_bfm "mm_master_bfm_0"
+Info: onchip_memory2_0: Starting RTL generation for module 'ddr_onchip_memory2_0'
+Info: onchip_memory2_0:   Generation command is [exec C:/intelfpga_lite/16.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/16.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=ddr_onchip_memory2_0 --dir=C:/Users/markl/AppData/Local/Temp/alt7742_3215356986853019399.dir/0321_onchip_memory2_0_gen/ --quartus_dir=C:/intelfpga_lite/16.1/quartus --verilog --config=C:/Users/markl/AppData/Local/Temp/alt7742_3215356986853019399.dir/0321_onchip_memory2_0_gen//ddr_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_memory2_0: Done RTL generation for module 'ddr_onchip_memory2_0'
+Info: onchip_memory2_0: "ddr" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
+Info: pio_0: Starting RTL generation for module 'ddr_pio_0'
+Info: pio_0:   Generation command is [exec C:/intelfpga_lite/16.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/16.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/16.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/16.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=ddr_pio_0 --dir=C:/Users/markl/AppData/Local/Temp/alt7742_3215356986853019399.dir/0322_pio_0_gen/ --quartus_dir=C:/intelfpga_lite/16.1/quartus --verilog --config=C:/Users/markl/AppData/Local/Temp/alt7742_3215356986853019399.dir/0322_pio_0_gen//ddr_pio_0_component_configuration.pl  --do_build_sim=0  ]
+Info: pio_0: Done RTL generation for module 'ddr_pio_0'
+Info: pio_0: "ddr" instantiated altera_avalon_pio "pio_0"
+Info: sysid_qsys_0: "ddr" instantiated altera_avalon_sysid_qsys "sysid_qsys_0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "ddr" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: rst_controller: "ddr" instantiated altera_reset_controller "rst_controller"
+Info: jtag_phy_embedded_in_jtag_master: "master_0" instantiated altera_jtag_dc_streaming "jtag_phy_embedded_in_jtag_master"
+Info: timing_adt: "master_0" instantiated timing_adapter "timing_adt"
+Info: fifo: "master_0" instantiated altera_avalon_sc_fifo "fifo"
+Info: b2p: "master_0" instantiated altera_avalon_st_bytes_to_packets "b2p"
+Info: p2b: "master_0" instantiated altera_avalon_st_packets_to_bytes "p2b"
+Info: transacto: "master_0" instantiated altera_avalon_packets_to_master "transacto"
+Info: b2p_adapter: "master_0" instantiated channel_adapter "b2p_adapter"
+Info: p2b_adapter: "master_0" instantiated channel_adapter "p2b_adapter"
+Info: pll0: "mem_if_ddr3_emif_0" instantiated altera_mem_if_ddr3_pll "pll0"
+Info: p0: Generating clock pair generator
+Info: p0: Generating altgpio
+Info: p0: 
+Info: p0: *****************************
+Info: p0: 
+Info: p0: Remember to run the ddr_mem_if_ddr3_emif_0_p0_pin_assignments.tcl
+Info: p0: script after running Synthesis and before Fitting.
+Info: p0: 
+Info: p0: *****************************
+Info: p0: 
+Info: p0: "mem_if_ddr3_emif_0" instantiated altera_mem_if_ddr3_phy_core "p0"
+Info: m0: "mem_if_ddr3_emif_0" instantiated altera_mem_if_ddr3_afi_mux "m0"
+Info: s0: Generating Qsys sequencer system
+Info: s0: QSYS sequencer system generated successfully
+Info: s0: "mem_if_ddr3_emif_0" instantiated altera_mem_if_ddr3_qseq "s0"
+Info: Reusing file E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/ddr/ddr/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: c0: "mem_if_ddr3_emif_0" instantiated altera_mem_if_nextgen_ddr3_controller "c0"
+Info: mm_master_bfm_0_m0_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "mm_master_bfm_0_m0_translator"
+Info: Reusing file E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/ddr/ddr/synthesis/submodules/altera_merlin_master_translator.sv
+Info: mem_if_ddr3_emif_0_avl_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "mem_if_ddr3_emif_0_avl_translator"
+Info: Reusing file E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/ddr/ddr/synthesis/submodules/altera_merlin_slave_translator.sv
+Info: mm_master_bfm_0_m0_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "mm_master_bfm_0_m0_agent"
+Info: Reusing file E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/ddr/ddr/synthesis/submodules/altera_merlin_master_agent.sv
+Info: mem_if_ddr3_emif_0_avl_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "mem_if_ddr3_emif_0_avl_agent"
+Info: Reusing file E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/ddr/ddr/synthesis/submodules/altera_merlin_slave_agent.sv
+Info: Reusing file E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/ddr/ddr/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_003: "mm_interconnect_0" instantiated altera_merlin_router "router_003"
+Info: router_004: "mm_interconnect_0" instantiated altera_merlin_router "router_004"
+Info: router_005: "mm_interconnect_0" instantiated altera_merlin_router "router_005"
+Info: router_006: "mm_interconnect_0" instantiated altera_merlin_router "router_006"
+Info: router_009: "mm_interconnect_0" instantiated altera_merlin_router "router_009"
+Info: mm_master_bfm_0_m0_limiter: "mm_interconnect_0" instantiated altera_merlin_traffic_limiter "mm_master_bfm_0_m0_limiter"
+Info: Reusing file E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/ddr/ddr/synthesis/submodules/altera_avalon_sc_fifo.v
+Info: Reusing file E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/ddr/ddr/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: dma_0_control_port_slave_burst_adapter: "mm_interconnect_0" instantiated altera_merlin_burst_adapter "dma_0_control_port_slave_burst_adapter"
+Info: Reusing file E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/ddr/ddr/synthesis/submodules/altera_avalon_st_pipeline_stage.sv
+Info: Reusing file E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/ddr/ddr/synthesis/submodules/altera_avalon_st_pipeline_base.v
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_demux_003: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_003"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: Reusing file E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/ddr/ddr/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: cmd_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_001"
+Info: Reusing file E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/ddr/ddr/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: cmd_mux_004: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_004"
+Info: Reusing file E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/ddr/ddr/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_001"
+Info: rsp_demux_004: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux_004"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/ddr/ddr/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux_003: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_003"
+Info: Reusing file E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/ddr/ddr/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: mm_master_bfm_0_m0_to_mem_if_ddr3_emif_0_avl_cmd_width_adapter: "mm_interconnect_0" instantiated altera_merlin_width_adapter "mm_master_bfm_0_m0_to_mem_if_ddr3_emif_0_avl_cmd_width_adapter"
+Info: Reusing file E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/ddr/ddr/synthesis/submodules/altera_merlin_address_alignment.sv
+Info: Reusing file E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/ddr/ddr/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: avalon_st_adapter_001: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter_001"
+Info: ng0: "c0" instantiated altera_mem_if_nextgen_ddr3_controller_core "ng0"
+Info: a0: "c0" instantiated alt_mem_ddrx_mm_st_converter "a0"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: error_adapter_0: "avalon_st_adapter_001" instantiated error_adapter "error_adapter_0"
+Info: ddr: Done "ddr" with 53 modules, 179 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

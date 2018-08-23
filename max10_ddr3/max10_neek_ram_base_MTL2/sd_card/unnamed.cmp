@@ -1,0 +1,19 @@
+	component unnamed is
+		port (
+			i_avalon_chip_select : in    std_logic                     := 'X';             -- chipselect
+			i_avalon_address     : in    std_logic_vector(7 downto 0)  := (others => 'X'); -- address
+			i_avalon_read        : in    std_logic                     := 'X';             -- read
+			i_avalon_write       : in    std_logic                     := 'X';             -- write
+			i_avalon_byteenable  : in    std_logic_vector(3 downto 0)  := (others => 'X'); -- byteenable
+			i_avalon_writedata   : in    std_logic_vector(31 downto 0) := (others => 'X'); -- writedata
+			o_avalon_readdata    : out   std_logic_vector(31 downto 0);                    -- readdata
+			o_avalon_waitrequest : out   std_logic;                                        -- waitrequest
+			i_clock              : in    std_logic                     := 'X';             -- clk
+			b_SD_cmd             : inout std_logic                     := 'X';             -- b_SD_cmd
+			b_SD_dat             : inout std_logic                     := 'X';             -- b_SD_dat
+			b_SD_dat3            : inout std_logic                     := 'X';             -- b_SD_dat3
+			o_SD_clock           : out   std_logic;                                        -- o_SD_clock
+			i_reset_n            : in    std_logic                     := 'X'              -- reset_n
+		);
+	end component unnamed;
+

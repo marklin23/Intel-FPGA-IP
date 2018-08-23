@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Thu Aug 09 14:06:41 2018
+Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+Revision Name : ddr
+Top-level Entity Name : golden_top
+Family : MAX 10
+Total logic elements : 3,538
+    Total combinational functions : 1,530
+    Dedicated logic registers : 2,927
+Total registers : 2927
+Total pins : 225
+Total virtual pins : 0
+Total memory bits : 958,464
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 1
+UFM blocks : 0
+ADC blocks : 0

@@ -1,0 +1,14 @@
+
+namespace eval QSYS_HEADER {
+
+    variable MASTER_0_OCRAM_1K_BASE 0x0
+    variable MASTER_0_TEMP_SPI_BASE 0x400
+    variable MASTER_0_LED_PIO_OUT8_BASE 0x420
+    variable MASTER_0_PB_PIO_IN1_BASE 0x430
+    variable MASTER_0_SYSID_BASE 0x440
+    variable MASTER_0_SYSID_ID 4207856382
+    variable MASTER_0_SYSID_TIMESTAMP 1476823578
+    variable MASTER_0_JTAG_UART_BASE 0x448
+
+}
+

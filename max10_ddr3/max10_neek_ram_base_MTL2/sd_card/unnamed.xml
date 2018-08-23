@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy
+ date="2018.07.30.21:05:31"
+ outputDirectory="E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/sd_card/">
+ <perimeter>
+  <parameter
+     name="AUTO_GENERATION_ID"
+     type="Integer"
+     defaultValue="0"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_UNIQUE_ID"
+     type="String"
+     defaultValue=""
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_FAMILY"
+     type="String"
+     defaultValue="MAX 10"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE"
+     type="String"
+     defaultValue="10M50DAF484C6GES"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_DEVICE_SPEEDGRADE"
+     type="String"
+     defaultValue="6"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_CLOCK_RATE"
+     type="Long"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_CLOCK_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <parameter
+     name="AUTO_CLK_RESET_DOMAIN"
+     type="Integer"
+     defaultValue="-1"
+     onHdl="0"
+     affectsHdl="1" />
+  <interface name="avalon_sdcard_slave" kind="avalon" start="0">
+   <property name="addressAlignment" value="DYNAMIC" />
+   <property name="addressGroup" value="0" />
+   <property name="addressSpan" value="1024" />
+   <property name="addressUnits" value="WORDS" />
+   <property name="alwaysBurstMaxBurst" value="false" />
+   <property name="associatedClock" value="clk" />
+   <property name="associatedReset" value="reset" />
+   <property name="bitsPerSymbol" value="8" />
+   <property name="bridgedAddressOffset" value="0" />
+   <property name="bridgesToMaster" value="" />
+   <property name="burstOnBurstBoundariesOnly" value="false" />
+   <property name="burstcountUnits" value="WORDS" />
+   <property name="constantBurstBehavior" value="false" />
+   <property name="explicitAddressSpan" value="0" />
+   <property name="holdTime" value="0" />
+   <property name="interleaveBursts" value="false" />
+   <property name="isBigEndian" value="false" />
+   <property name="isFlash" value="false" />
+   <property name="isMemoryDevice" value="false" />
+   <property name="isNonVolatileStorage" value="false" />
+   <property name="linewrapBursts" value="false" />
+   <property name="maximumPendingReadTransactions" value="0" />
+   <property name="maximumPendingWriteTransactions" value="0" />
+   <property name="minimumUninterruptedRunLength" value="1" />
+   <property name="printableDevice" value="false" />
+   <property name="readLatency" value="0" />
+   <property name="readWaitStates" value="1" />
+   <property name="readWaitTime" value="1" />
+   <property name="registerIncomingSignals" value="false" />
+   <property name="registerOutgoingSignals" value="false" />
+   <property name="setupTime" value="0" />
+   <property name="timingUnits" value="Cycles" />
+   <property name="transparentBridge" value="false" />
+   <property name="wellBehavedWaitrequest" value="false" />
+   <property name="writeLatency" value="0" />
+   <property name="writeWaitStates" value="0" />
+   <property name="writeWaitTime" value="0" />
+   <port
+       name="i_avalon_chip_select"
+       direction="input"
+       role="chipselect"
+       width="1" />
+   <port name="i_avalon_address" direction="input" role="address" width="8" />
+   <port name="i_avalon_read" direction="input" role="read" width="1" />
+   <port name="i_avalon_write" direction="input" role="write" width="1" />
+   <port
+       name="i_avalon_byteenable"
+       direction="input"
+       role="byteenable"
+       width="4" />
+   <port
+       name="i_avalon_writedata"
+       direction="input"
+       role="writedata"
+       width="32" />
+   <port
+       name="o_avalon_readdata"
+       direction="output"
+       role="readdata"
+       width="32" />
+   <port
+       name="o_avalon_waitrequest"
+       direction="output"
+       role="waitrequest"
+       width="1" />
+  </interface>
+  <interface name="clk" kind="clock" start="0">
+   <property name="clockRate" value="0" />
+   <property name="externallyDriven" value="false" />
+   <property name="ptfSchematicName" value="" />
+   <port name="i_clock" direction="input" role="clk" width="1" />
+  </interface>
+  <interface name="conduit_end" kind="conduit" start="0">
+   <property name="associatedClock" value="" />
+   <property name="associatedReset" value="" />
+   <port name="b_SD_cmd" direction="bidir" role="b_SD_cmd" width="1" />
+   <port name="b_SD_dat" direction="bidir" role="b_SD_dat" width="1" />
+   <port name="b_SD_dat3" direction="bidir" role="b_SD_dat3" width="1" />
+   <port name="o_SD_clock" direction="output" role="o_SD_clock" width="1" />
+  </interface>
+  <interface name="reset" kind="reset" start="0">
+   <property name="associatedClock" value="clk" />
+   <property name="synchronousEdges" value="DEASSERT" />
+   <port name="i_reset_n" direction="input" role="reset_n" width="1" />
+  </interface>
+ </perimeter>
+ <entity
+   path=""
+   parameterizationKey="unnamed:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=10M50DAF484C6GES,AUTO_DEVICE_FAMILY=MAX 10,AUTO_DEVICE_SPEEDGRADE=6,AUTO_GENERATION_ID=1532955929,AUTO_UNIQUE_ID=(Altera_UP_SD_Card_Avalon_Interface:16.1:AUTO_CLK_CLOCK_RATE=0,AUTO_DEVICE_FAMILY=MAX 10)"
+   instancePathKey="unnamed"
+   kind="unnamed"
+   version="1.0"
+   name="unnamed">
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
+  <parameter name="AUTO_GENERATION_ID" value="1532955929" />
+  <parameter name="AUTO_DEVICE" value="10M50DAF484C6GES" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="MAX 10" />
+  <parameter name="AUTO_CLK_RESET_DOMAIN" value="-1" />
+  <parameter name="AUTO_CLK_CLOCK_DOMAIN" value="-1" />
+  <parameter name="AUTO_UNIQUE_ID" value="" />
+  <parameter name="AUTO_DEVICE_SPEEDGRADE" value="6" />
+  <generatedFiles>
+   <file
+       path="E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/sd_card/synthesis/unnamed.v"
+       type="VERILOG" />
+  </generatedFiles>
+  <childGeneratedFiles>
+   <file
+       path="E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/sd_card/synthesis/submodules/Altera_UP_SD_Card_Avalon_Interface.vhd"
+       type="VHDL" />
+   <file
+       path="E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/sd_card/synthesis/submodules/Altera_UP_SD_Card_48_bit_Command_Generator.vhd"
+       type="VHDL" />
+   <file
+       path="E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/sd_card/synthesis/submodules/Altera_UP_SD_Card_Buffer.vhd"
+       type="VHDL" />
+   <file
+       path="E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/sd_card/synthesis/submodules/Altera_UP_SD_Card_Clock.vhd"
+       type="VHDL" />
+   <file
+       path="E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/sd_card/synthesis/submodules/Altera_UP_SD_Card_Control_FSM.vhd"
+       type="VHDL" />
+   <file
+       path="E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/sd_card/synthesis/submodules/Altera_UP_SD_Card_Interface.vhd"
+       type="VHDL" />
+   <file
+       path="E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/sd_card/synthesis/submodules/Altera_UP_SD_Card_Response_Receiver.vhd"
+       type="VHDL" />
+   <file
+       path="E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/sd_card/synthesis/submodules/Altera_UP_SD_CRC16_Generator.vhd"
+       type="VHDL" />
+   <file
+       path="E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/sd_card/synthesis/submodules/Altera_UP_SD_CRC7_Generator.vhd"
+       type="VHDL" />
+   <file
+       path="E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/sd_card/synthesis/submodules/Altera_UP_SD_Signal_Trigger.vhd"
+       type="VHDL" />
+   <file
+       path="E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/sd_card/synthesis/submodules/Altera_UP_SD_Card_Memory_Block.vhd"
+       type="VHDL" />
+  </childGeneratedFiles>
+  <sourceFiles>
+   <file
+       path="E:/work/cloud/GFEC/02_Altera/Altera_DemoBoard/MAX10 NEEK/Demonstrations/sdcard_audio/unnamed.qsys" />
+  </sourceFiles>
+  <childSourceFiles>
+   <file
+       path="C:/intelfpga_lite/16.1/ip/altera/university_program/memory/altera_up_sd_card_avalon_interface/Altera_UP_SD_Card_Avalon_Interface_hw.tcl" />
+   <file
+       path="C:/intelfpga_lite/16.1/ip/altera/university_program/memory/altera_up_sd_card_avalon_interface/hdl/Altera_UP_SD_Card_Avalon_Interface.vhd" />
+   <file
+       path="C:/intelfpga_lite/16.1/ip/altera/university_program/memory/altera_up_sd_card_avalon_interface/hdl/Altera_UP_SD_Card_48_bit_Command_Generator.vhd" />
+   <file
+       path="C:/intelfpga_lite/16.1/ip/altera/university_program/memory/altera_up_sd_card_avalon_interface/hdl/Altera_UP_SD_Card_Buffer.vhd" />
+   <file
+       path="C:/intelfpga_lite/16.1/ip/altera/university_program/memory/altera_up_sd_card_avalon_interface/hdl/Altera_UP_SD_Card_Clock.vhd" />
+   <file
+       path="C:/intelfpga_lite/16.1/ip/altera/university_program/memory/altera_up_sd_card_avalon_interface/hdl/Altera_UP_SD_Card_Control_FSM.vhd" />
+   <file
+       path="C:/intelfpga_lite/16.1/ip/altera/university_program/memory/altera_up_sd_card_avalon_interface/hdl/Altera_UP_SD_Card_Interface.vhd" />
+   <file
+       path="C:/intelfpga_lite/16.1/ip/altera/university_program/memory/altera_up_sd_card_avalon_interface/hdl/Altera_UP_SD_Card_Response_Receiver.vhd" />
+   <file
+       path="C:/intelfpga_lite/16.1/ip/altera/university_program/memory/altera_up_sd_card_avalon_interface/hdl/Altera_UP_SD_CRC16_Generator.vhd" />
+   <file
+       path="C:/intelfpga_lite/16.1/ip/altera/university_program/memory/altera_up_sd_card_avalon_interface/hdl/Altera_UP_SD_CRC7_Generator.vhd" />
+   <file
+       path="C:/intelfpga_lite/16.1/ip/altera/university_program/memory/altera_up_sd_card_avalon_interface/hdl/Altera_UP_SD_Signal_Trigger.vhd" />
+   <file
+       path="C:/intelfpga_lite/16.1/ip/altera/university_program/memory/altera_up_sd_card_avalon_interface/hdl/Altera_UP_SD_Card_Memory_Block.vhd" />
+  </childSourceFiles>
+  <messages>
+   <message level="Debug" culprit="unnamed">queue size: 0 starting:unnamed "unnamed"</message>
+   <message level="Progress" culprit="min"></message>
+   <message level="Progress" culprit="max"></message>
+   <message level="Progress" culprit="current"></message>
+   <message level="Debug">Transform: CustomInstructionTransform</message>
+   <message level="Debug">No custom instruction connections, skipping transform </message>
+   <message level="Debug" culprit="merlin_custom_instruction_transform"><![CDATA[After transform: <b>1</b> modules, <b>0</b> connections]]></message>
+   <message level="Debug">Transform: MMTransform</message>
+   <message level="Debug">Transform: InterruptMapperTransform</message>
+   <message level="Debug">Transform: InterruptSyncTransform</message>
+   <message level="Debug">Transform: InterruptFanoutTransform</message>
+   <message level="Debug">Transform: AvalonStreamingTransform</message>
+   <message level="Debug">Transform: ResetAdaptation</message>
+   <message level="Debug" culprit="unnamed"><![CDATA["<b>unnamed</b>" reuses <b>Altera_UP_SD_Card_Avalon_Interface</b> "<b>submodules/Altera_UP_SD_Card_Avalon_Interface</b>"]]></message>
+   <message level="Debug" culprit="unnamed">queue size: 0 starting:Altera_UP_SD_Card_Avalon_Interface "submodules/Altera_UP_SD_Card_Avalon_Interface"</message>
+   <message level="Debug">set ALTERA_HW_TCL_KEEP_TEMP_FILES=1 to retain temp files</message>
+   <message level="Debug">Command: C:/intelfpga_lite/16.1/quartus\bin64/quartus_sh.exe -t C:/Users/markl/AppData/Local/Temp/alt7742_3631562581817765241.dir/0004_sopcqmap/not_a_project_setup.tcl</message>
+   <message level="Debug">Command: C:/intelfpga_lite/16.1/quartus\bin64/quartus_map.exe not_a_project --generate_hdl_interface=C:/intelfpga_lite/16.1/ip/altera/university_program/memory/altera_up_sd_card_avalon_interface/hdl/Altera_UP_SD_Card_Avalon_Interface.vhd --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/markl/AppData/Local/Temp/alt7742_3631562581817765241.dir/0004_sopcqmap/ --ini=disable_check_quartus_compatibility_qsys_only=on</message>
+   <message level="Debug">Command took 1.038s</message>
+   <message level="Debug">Command took 1.841s</message>
+   <message level="Info" culprit="Altera_UP_SD_Card_Avalon_Interface_0"><![CDATA["<b>unnamed</b>" instantiated <b>Altera_UP_SD_Card_Avalon_Interface</b> "<b>Altera_UP_SD_Card_Avalon_Interface_0</b>"]]></message>
+  </messages>
+ </entity>
+ <entity
+   path="submodules/"
+   parameterizationKey="Altera_UP_SD_Card_Avalon_Interface:16.1:AUTO_CLK_CLOCK_RATE=0,AUTO_DEVICE_FAMILY=MAX 10"
+   instancePathKey="unnamed:.:Altera_UP_SD_Card_Avalon_Interface_0"
+   kind="Altera_UP_SD_Card_Avalon_Interface"
+   version="16.1"
+   name="Altera_UP_SD_Card_Avalon_Interface">
+  <parameter name="AUTO_CLK_CLOCK_RATE" value="0" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="MAX 10" />
+  <generatedFiles>
+   <file
+       path="E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/sd_card/synthesis/submodules/Altera_UP_SD_Card_Avalon_Interface.vhd"
+       type="VHDL" />
+   <file
+       path="E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/sd_card/synthesis/submodules/Altera_UP_SD_Card_48_bit_Command_Generator.vhd"
+       type="VHDL" />
+   <file
+       path="E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/sd_card/synthesis/submodules/Altera_UP_SD_Card_Buffer.vhd"
+       type="VHDL" />
+   <file
+       path="E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/sd_card/synthesis/submodules/Altera_UP_SD_Card_Clock.vhd"
+       type="VHDL" />
+   <file
+       path="E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/sd_card/synthesis/submodules/Altera_UP_SD_Card_Control_FSM.vhd"
+       type="VHDL" />
+   <file
+       path="E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/sd_card/synthesis/submodules/Altera_UP_SD_Card_Interface.vhd"
+       type="VHDL" />
+   <file
+       path="E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/sd_card/synthesis/submodules/Altera_UP_SD_Card_Response_Receiver.vhd"
+       type="VHDL" />
+   <file
+       path="E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/sd_card/synthesis/submodules/Altera_UP_SD_CRC16_Generator.vhd"
+       type="VHDL" />
+   <file
+       path="E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/sd_card/synthesis/submodules/Altera_UP_SD_CRC7_Generator.vhd"
+       type="VHDL" />
+   <file
+       path="E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/sd_card/synthesis/submodules/Altera_UP_SD_Signal_Trigger.vhd"
+       type="VHDL" />
+   <file
+       path="E:/work/cloud/GFEC/02_Altera/Altera_IP/ddr/max10_proj/sd_card/synthesis/submodules/Altera_UP_SD_Card_Memory_Block.vhd"
+       type="VHDL" />
+  </generatedFiles>
+  <childGeneratedFiles/>
+  <sourceFiles>
+   <file
+       path="C:/intelfpga_lite/16.1/ip/altera/university_program/memory/altera_up_sd_card_avalon_interface/Altera_UP_SD_Card_Avalon_Interface_hw.tcl" />
+   <file
+       path="C:/intelfpga_lite/16.1/ip/altera/university_program/memory/altera_up_sd_card_avalon_interface/hdl/Altera_UP_SD_Card_Avalon_Interface.vhd" />
+   <file
+       path="C:/intelfpga_lite/16.1/ip/altera/university_program/memory/altera_up_sd_card_avalon_interface/hdl/Altera_UP_SD_Card_48_bit_Command_Generator.vhd" />
+   <file
+       path="C:/intelfpga_lite/16.1/ip/altera/university_program/memory/altera_up_sd_card_avalon_interface/hdl/Altera_UP_SD_Card_Buffer.vhd" />
+   <file
+       path="C:/intelfpga_lite/16.1/ip/altera/university_program/memory/altera_up_sd_card_avalon_interface/hdl/Altera_UP_SD_Card_Clock.vhd" />
+   <file
+       path="C:/intelfpga_lite/16.1/ip/altera/university_program/memory/altera_up_sd_card_avalon_interface/hdl/Altera_UP_SD_Card_Control_FSM.vhd" />
+   <file
+       path="C:/intelfpga_lite/16.1/ip/altera/university_program/memory/altera_up_sd_card_avalon_interface/hdl/Altera_UP_SD_Card_Interface.vhd" />
+   <file
+       path="C:/intelfpga_lite/16.1/ip/altera/university_program/memory/altera_up_sd_card_avalon_interface/hdl/Altera_UP_SD_Card_Response_Receiver.vhd" />
+   <file
+       path="C:/intelfpga_lite/16.1/ip/altera/university_program/memory/altera_up_sd_card_avalon_interface/hdl/Altera_UP_SD_CRC16_Generator.vhd" />
+   <file
+       path="C:/intelfpga_lite/16.1/ip/altera/university_program/memory/altera_up_sd_card_avalon_interface/hdl/Altera_UP_SD_CRC7_Generator.vhd" />
+   <file
+       path="C:/intelfpga_lite/16.1/ip/altera/university_program/memory/altera_up_sd_card_avalon_interface/hdl/Altera_UP_SD_Signal_Trigger.vhd" />
+   <file
+       path="C:/intelfpga_lite/16.1/ip/altera/university_program/memory/altera_up_sd_card_avalon_interface/hdl/Altera_UP_SD_Card_Memory_Block.vhd" />
+  </sourceFiles>
+  <childSourceFiles/>
+  <instantiator instantiator="unnamed" as="Altera_UP_SD_Card_Avalon_Interface_0" />
+  <messages>
+   <message level="Debug" culprit="unnamed">queue size: 0 starting:Altera_UP_SD_Card_Avalon_Interface "submodules/Altera_UP_SD_Card_Avalon_Interface"</message>
+   <message level="Debug">set ALTERA_HW_TCL_KEEP_TEMP_FILES=1 to retain temp files</message>
+   <message level="Debug">Command: C:/intelfpga_lite/16.1/quartus\bin64/quartus_sh.exe -t C:/Users/markl/AppData/Local/Temp/alt7742_3631562581817765241.dir/0004_sopcqmap/not_a_project_setup.tcl</message>
+   <message level="Debug">Command: C:/intelfpga_lite/16.1/quartus\bin64/quartus_map.exe not_a_project --generate_hdl_interface=C:/intelfpga_lite/16.1/ip/altera/university_program/memory/altera_up_sd_card_avalon_interface/hdl/Altera_UP_SD_Card_Avalon_Interface.vhd --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/markl/AppData/Local/Temp/alt7742_3631562581817765241.dir/0004_sopcqmap/ --ini=disable_check_quartus_compatibility_qsys_only=on</message>
+   <message level="Debug">Command took 1.038s</message>
+   <message level="Debug">Command took 1.841s</message>
+   <message level="Info" culprit="Altera_UP_SD_Card_Avalon_Interface_0"><![CDATA["<b>unnamed</b>" instantiated <b>Altera_UP_SD_Card_Avalon_Interface</b> "<b>Altera_UP_SD_Card_Avalon_Interface_0</b>"]]></message>
+  </messages>
+ </entity>
+</deploy>

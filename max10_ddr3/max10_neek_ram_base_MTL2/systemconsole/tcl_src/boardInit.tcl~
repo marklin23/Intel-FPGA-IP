@@ -1,0 +1,337 @@
+namespace eval boardInit {
+
+    variable initialized 0
+    variable errors 0
+    variable sofFilename "../test_project.sof"
+    variable jdiFilename "../test_project.jdi"
+    variable qsys_headerFilename "headers/test_sys_top_qsys.tcl"
+    variable masterPath ""
+    variable bytestreamPath ""
+    variable jtaguartPath ""
+    variable dash_path ""
+    variable dashboardActive 0
+
+    proc init {} {
+
+        if { ${::boardInit::initialized} == 1 } {
+            return -code ok "already initialized"
+        }
+
+        set ::boardInit::errors 0
+
+        #
+        # make sure that the SOF and JDI files exist
+        #
+        if { ![ file isfile ${::boardInit::sofFilename} ] } {
+            set ::boardInit::errors 1
+            ::boardInit::updateDashboard
+            return -code error "unable to locate SOF file"
+        }
+
+        if { ![ file isfile ${::boardInit::jdiFilename} ] } {
+            set ::boardInit::errors 1
+            ::boardInit::updateDashboard
+            return -code error "unable to locate JDI file"
+        }
+
+        #
+        # make sure that BeMicroSDK board appears to be the only board available
+        #
+        if { [ llength [ get_service_paths device ] ] > 1 } {
+            set ::boardInit::errors 1
+            ::boardInit::updateDashboard
+            return -code error "too many devices located, expecting only 1 BeMicro SDK board"
+        }
+
+        if { [ llength [ get_service_paths device ] ] == 0 } {
+            set ::boardInit::errors 1
+            ::boardInit::updateDashboard
+            return -code error "no devices located, expecting only 1 BeMicro SDK board"
+        }
+
+        if { [ lsearch [ get_service_paths device ] "*EP3C25|EP4CE22@1*" ] < 0 } {
+            set ::boardInit::errors 1
+            ::boardInit::updateDashboard
+            return -code error "the one device available does not appear to be a BeMicro SDK"
+        }
+
+        #
+        # download the SOF file into the device
+        #
+        device_download_sof [ get_service_paths device ] ${::boardInit::sofFilename}
+
+        #
+        # load the JDI file into system console
+        #
+        # this is the old way:
+        # device_load_jdi [ get_service_paths device ] ${::boardInit::jdiFilename}
+        #
+        # we'll use the new way:
+        #
+        design_link [ design_load [ file dirname ${::boardInit::jdiFilename} ] ] [ get_service_paths device ]
+
+        #
+        # setup the service path variables
+        #
+        if { [ lsearch [ get_service_paths master ] "*/phy_0/master_0.master" ] < 0 } {
+            set ::boardInit::errors 1
+            ::boardInit::updateDashboard
+            return -code error "master service path was not identified correctly"
+        }
+
+        if { [ lsearch [ get_service_paths bytestream ] "*/jtag_uart.jtag" ] < 0 } {
+            set ::boardInit::errors 1
+            ::boardInit::updateDashboard
+            return -code error "jtaguart service path was not identified correctly"
+        }
+
+        if { [  lsearch [ get_service_paths bytestream ] "*/phy_1" ] < 0 } {
+            set ::boardInit::errors 1
+            ::boardInit::updateDashboard
+            return -code error "bytestream service path was not identified correctly"
+        }
+      
+        set ::boardInit::masterPath     [ lindex [ get_service_paths master ] [ lsearch [ get_service_paths master ] "*/phy_0/master_0.master" ] ]
+        set ::boardInit::jtaguartPath    [ lindex [ get_service_paths bytestream ] [ lsearch [ get_service_paths bytestream ] "*/jtag_uart.jtag" ] ]
+        set ::boardInit::bytestreamPath    [ lindex [ get_service_paths bytestream ] [  lsearch [ get_service_paths bytestream ] "*/phy_1" ] ]
+
+        #
+        # load the Qsys header namespace if it isn't already loaded
+        #
+        if { ![ namespace exists ::QSYS_HEADER ] } {
+            if { ![ file isfile ${::boardInit::qsys_headerFilename} ] } {
+                set ::boardInit::errors 1
+                ::boardInit::updateDashboard
+                return -code error "unable to locate Qsys header file"
+            }
+            namespace eval :: {
+                source ${::boardInit::qsys_headerFilename}
+            }
+            if { ![ namespace exists ::QSYS_HEADER ] } {
+                set ::boardInit::errors 1
+                ::boardInit::updateDashboard
+                return -code error "Qsys header did not load properly"
+            }
+        }
+
+        set ::boardInit::initialized 1
+        ::boardInit::updateDashboard
+        return -code ok
+    }
+
+    proc dashBoard {} {
+
+        if { ${::boardInit::dashboardActive} == 1 } {
+            return -code ok "dashboard already active"
+        }
+
+        set ::boardInit::dashboardActive 1
+        #
+        # Create dashboard 
+        #
+        variable ::boardInit::dash_path [ add_service dashboard boardInit "boardInit" "Tools/boardInit"]
+
+        #
+        # Set dashboard properties
+        #
+        dashboard_set_property ${::boardInit::dash_path} self developmentMode true
+        dashboard_set_property ${::boardInit::dash_path} self itemsPerRow 1
+        dashboard_set_property ${::boardInit::dash_path} self visible true
+        
+        #
+        # top group widget
+        #
+        dashboard_add ${::boardInit::dash_path} topGroup group self
+        dashboard_set_property ${::boardInit::dash_path} topGroup expandableX false
+        dashboard_set_property ${::boardInit::dash_path} topGroup expandableY false
+        dashboard_set_property ${::boardInit::dash_path} topGroup itemsPerRow 1
+        dashboard_set_property ${::boardInit::dash_path} topGroup title ""
+
+        #
+        # files group widget
+        #
+        dashboard_add ${::boardInit::dash_path} FilesGroup group topGroup
+        dashboard_set_property ${::boardInit::dash_path} FilesGroup expandableX false
+        dashboard_set_property ${::boardInit::dash_path} FilesGroup expandableY false
+        dashboard_set_property ${::boardInit::dash_path} FilesGroup itemsPerRow 1
+        dashboard_set_property ${::boardInit::dash_path} FilesGroup title "Project Files"
+
+        #
+        # SOF file widgets
+        #
+        dashboard_add ${::boardInit::dash_path} sofFileGroup group FilesGroup 
+        dashboard_set_property ${::boardInit::dash_path} sofFileGroup expandableX false
+        dashboard_set_property ${::boardInit::dash_path} sofFileGroup expandableY false
+        dashboard_set_property ${::boardInit::dash_path} sofFileGroup itemsPerRow 2
+        dashboard_set_property ${::boardInit::dash_path} sofFileGroup title "SOF File"
+
+        dashboard_add ${::boardInit::dash_path} sofFileText text sofFileGroup 
+        dashboard_set_property ${::boardInit::dash_path} sofFileText expandableX false
+        dashboard_set_property ${::boardInit::dash_path} sofFileText expandableY false
+        dashboard_set_property ${::boardInit::dash_path} sofFileText preferredWidth 250
+        dashboard_set_property ${::boardInit::dash_path} sofFileText editable false
+        dashboard_set_property ${::boardInit::dash_path} sofFileText htmlCapable false
+        dashboard_set_property ${::boardInit::dash_path} sofFileText text ${::boardInit::sofFilename}
+
+        dashboard_add ${::boardInit::dash_path} sofFileChooser fileChooserButton sofFileGroup 
+        dashboard_set_property ${::boardInit::dash_path} sofFileChooser expandableX false
+        dashboard_set_property ${::boardInit::dash_path} sofFileChooser expandableY false
+        dashboard_set_property ${::boardInit::dash_path} sofFileChooser chooserButtonText "Select"
+        dashboard_set_property ${::boardInit::dash_path} sofFileChooser text "Choose SOF File"
+        dashboard_set_property ${::boardInit::dash_path} sofFileChooser title "none"
+        dashboard_set_property ${::boardInit::dash_path} sofFileChooser multiSelectionEnabled false
+        dashboard_set_property ${::boardInit::dash_path} sofFileChooser mode "files_only"
+        dashboard_set_property ${::boardInit::dash_path} sofFileChooser filter [ list "SOF File" "sof" ]
+        dashboard_set_property ${::boardInit::dash_path} sofFileChooser onChoose ::boardInit::updateSOFFilename 
+
+        #
+        # JDI file widgets
+        #
+        dashboard_add ${::boardInit::dash_path} jdiFileGroup group FilesGroup 
+        dashboard_set_property ${::boardInit::dash_path} jdiFileGroup expandableX false
+        dashboard_set_property ${::boardInit::dash_path} jdiFileGroup expandableY false
+        dashboard_set_property ${::boardInit::dash_path} jdiFileGroup itemsPerRow 2
+        dashboard_set_property ${::boardInit::dash_path} jdiFileGroup title "JDI File"
+
+        dashboard_add ${::boardInit::dash_path} jdiFileText text jdiFileGroup 
+        dashboard_set_property ${::boardInit::dash_path} jdiFileText expandableX false
+        dashboard_set_property ${::boardInit::dash_path} jdiFileText expandableY false
+        dashboard_set_property ${::boardInit::dash_path} jdiFileText preferredWidth 250
+        dashboard_set_property ${::boardInit::dash_path} jdiFileText editable false
+        dashboard_set_property ${::boardInit::dash_path} jdiFileText htmlCapable false
+        dashboard_set_property ${::boardInit::dash_path} jdiFileText text ${::boardInit::jdiFilename}
+
+        dashboard_add ${::boardInit::dash_path} jdiFileChooser fileChooserButton jdiFileGroup 
+        dashboard_set_property ${::boardInit::dash_path} jdiFileChooser expandableX false
+        dashboard_set_property ${::boardInit::dash_path} jdiFileChooser expandableY false
+        dashboard_set_property ${::boardInit::dash_path} jdiFileChooser chooserButtonText "Select"
+        dashboard_set_property ${::boardInit::dash_path} jdiFileChooser text "Choose JDI File"
+        dashboard_set_property ${::boardInit::dash_path} jdiFileChooser title "none"
+        dashboard_set_property ${::boardInit::dash_path} jdiFileChooser multiSelectionEnabled false
+        dashboard_set_property ${::boardInit::dash_path} jdiFileChooser mode "files_only"
+        dashboard_set_property ${::boardInit::dash_path} jdiFileChooser filter [ list "JDI File" "jdi" ]
+        dashboard_set_property ${::boardInit::dash_path} jdiFileChooser onChoose ::boardInit::updateJDIFilename 
+
+        #
+        # Qsys header file widgets
+        #
+        dashboard_add ${::boardInit::dash_path} qsys_headerFileGroup group FilesGroup 
+        dashboard_set_property ${::boardInit::dash_path} qsys_headerFileGroup expandableX false
+        dashboard_set_property ${::boardInit::dash_path} qsys_headerFileGroup expandableY false
+        dashboard_set_property ${::boardInit::dash_path} qsys_headerFileGroup itemsPerRow 2
+        dashboard_set_property ${::boardInit::dash_path} qsys_headerFileGroup title "Qsys Header File"
+
+        dashboard_add ${::boardInit::dash_path} qsys_headerFileText text qsys_headerFileGroup 
+        dashboard_set_property ${::boardInit::dash_path} qsys_headerFileText expandableX false
+        dashboard_set_property ${::boardInit::dash_path} qsys_headerFileText expandableY false
+        dashboard_set_property ${::boardInit::dash_path} qsys_headerFileText preferredWidth 250
+        dashboard_set_property ${::boardInit::dash_path} qsys_headerFileText editable false
+        dashboard_set_property ${::boardInit::dash_path} qsys_headerFileText htmlCapable false
+        dashboard_set_property ${::boardInit::dash_path} qsys_headerFileText text ${::boardInit::qsys_headerFilename}
+
+        dashboard_add ${::boardInit::dash_path} qsys_headerFileChooser fileChooserButton qsys_headerFileGroup 
+        dashboard_set_property ${::boardInit::dash_path} qsys_headerFileChooser expandableX false
+        dashboard_set_property ${::boardInit::dash_path} qsys_headerFileChooser expandableY false
+        dashboard_set_property ${::boardInit::dash_path} qsys_headerFileChooser chooserButtonText "Select"
+        dashboard_set_property ${::boardInit::dash_path} qsys_headerFileChooser text "Choose Header File"
+        dashboard_set_property ${::boardInit::dash_path} qsys_headerFileChooser title "none"
+        dashboard_set_property ${::boardInit::dash_path} qsys_headerFileChooser multiSelectionEnabled false
+        dashboard_set_property ${::boardInit::dash_path} qsys_headerFileChooser mode "files_only"
+        dashboard_set_property ${::boardInit::dash_path} qsys_headerFileChooser filter [ list "TCL File" "tcl" ]
+        dashboard_set_property ${::boardInit::dash_path} qsys_headerFileChooser onChoose ::boardInit::updateqsys_headerFilename 
+
+        #
+        # lower widgets group widget
+        #
+        dashboard_add ${::boardInit::dash_path} lowerGroup group topGroup
+        dashboard_set_property ${::boardInit::dash_path} lowerGroup expandableX false
+        dashboard_set_property ${::boardInit::dash_path} lowerGroup expandableY false
+        dashboard_set_property ${::boardInit::dash_path} lowerGroup itemsPerRow 2
+        dashboard_set_property ${::boardInit::dash_path} lowerGroup title ""
+
+        #
+        # status group widget
+        #
+        dashboard_add ${::boardInit::dash_path} statusGroup group lowerGroup 
+        dashboard_set_property ${::boardInit::dash_path} statusGroup expandableX false
+        dashboard_set_property ${::boardInit::dash_path} statusGroup expandableY false
+        dashboard_set_property ${::boardInit::dash_path} statusGroup itemsPerRow 1
+        dashboard_set_property ${::boardInit::dash_path} statusGroup title "Status"
+
+        #
+        # initialized widget
+        #
+        dashboard_add ${::boardInit::dash_path} initializeLED led statusGroup 
+        dashboard_set_property ${::boardInit::dash_path} initializeLED expandableX false
+        dashboard_set_property ${::boardInit::dash_path} initializeLED expandableY false
+        dashboard_set_property ${::boardInit::dash_path} initializeLED text "Initialized"
+        dashboard_set_property ${::boardInit::dash_path} initializeLED color "green_off"
+
+        #
+        # errors widget
+        #
+        dashboard_add ${::boardInit::dash_path} errorsLED led statusGroup 
+        dashboard_set_property ${::boardInit::dash_path} errorsLED expandableX false
+        dashboard_set_property ${::boardInit::dash_path} errorsLED expandableY false
+        dashboard_set_property ${::boardInit::dash_path} errorsLED text "Errors"
+        dashboard_set_property ${::boardInit::dash_path} errorsLED color "red_off"
+
+        #
+        # init button widget
+        #
+        dashboard_add ${::boardInit::dash_path} initButton button lowerGroup 
+        dashboard_set_property ${::boardInit::dash_path} initButton enabled true
+        dashboard_set_property ${::boardInit::dash_path} initButton expandableY false
+        dashboard_set_property ${::boardInit::dash_path} initButton expandableY false
+        dashboard_set_property ${::boardInit::dash_path} initButton text "Initialize"
+        dashboard_set_property ${::boardInit::dash_path} initButton onClick ::boardInit::init
+
+        ::boardInit::updateDashboard
+
+        return -code ok
+    }
+    
+    proc updateDashboard {} {
+
+        if { ${::boardInit::dashboardActive} > 0 } {
+
+            if { ${::boardInit::initialized} > 0 } {
+                dashboard_set_property ${::boardInit::dash_path} initButton enabled false
+                dashboard_set_property ${::boardInit::dash_path} initializeLED color "green"
+            } else {
+                dashboard_set_property ${::boardInit::dash_path} initButton enabled true
+                dashboard_set_property ${::boardInit::dash_path} initializeLED color "green_off"
+            }
+
+            if { ${::boardInit::errors} > 0 } {
+                dashboard_set_property ${::boardInit::dash_path} errorsLED color "red"
+            } else {
+                dashboard_set_property ${::boardInit::dash_path} errorsLED color "red_off"
+            }
+        }
+    }
+
+    proc updateSOFFilename {} {
+        
+        if { [ llength [ dashboard_get_property ${::boardInit::dash_path} sofFileChooser paths ] ] > 0 } {
+            set ::boardInit::sofFilename [ lindex [ dashboard_get_property ${::boardInit::dash_path} sofFileChooser paths ]  0 ]
+            dashboard_set_property ${::boardInit::dash_path} sofFileText text ${::boardInit::sofFilename}
+        }
+    }
+
+    proc updateJDIFilename {} {
+        
+        if { [ llength [ dashboard_get_property ${::boardInit::dash_path} jdiFileChooser paths ] ] > 0 } {
+            set ::boardInit::jdiFilename [ lindex [ dashboard_get_property ${::boardInit::dash_path} jdiFileChooser paths ]  0 ]
+            dashboard_set_property ${::boardInit::dash_path} jdiFileText text ${::boardInit::jdiFilename}
+        }
+    }
+
+    proc updateqsys_headerFilename {} {
+        
+        if { [ llength [ dashboard_get_property ${::boardInit::dash_path} qsys_headerFileChooser paths ] ] > 0 } {
+            set ::boardInit::qsys_headerFilename [ lindex [ dashboard_get_property ${::boardInit::dash_path} qsys_headerFileChooser paths ] 0 ]
+            dashboard_set_property ${::boardInit::dash_path} qsys_headerFileText text ${::boardInit::qsys_headerFilename}
+        }
+    }
+}

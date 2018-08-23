@@ -1,0 +1,177 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "MTL2_B[0]",
+					"strict" : false
+				},
+				{
+					"name" : "MTL2_B[1]",
+					"strict" : false
+				},
+				{
+					"name" : "MTL2_B[2]",
+					"strict" : false
+				},
+				{
+					"name" : "MTL2_B[3]",
+					"strict" : false
+				},
+				{
+					"name" : "MTL2_B[4]",
+					"strict" : false
+				},
+				{
+					"name" : "MTL2_B[5]",
+					"strict" : false
+				},
+				{
+					"name" : "MTL2_B[6]",
+					"strict" : false
+				},
+				{
+					"name" : "MTL2_B[7]",
+					"strict" : false
+				},
+				{
+					"name" : "MTL2_BL_ON_n",
+					"strict" : false
+				},
+				{
+					"name" : "MTL2_G[0]",
+					"strict" : false
+				},
+				{
+					"name" : "MTL2_G[1]",
+					"strict" : false
+				},
+				{
+					"name" : "MTL2_G[2]",
+					"strict" : false
+				},
+				{
+					"name" : "MTL2_G[3]",
+					"strict" : false
+				},
+				{
+					"name" : "MTL2_G[4]",
+					"strict" : false
+				},
+				{
+					"name" : "MTL2_G[5]",
+					"strict" : false
+				},
+				{
+					"name" : "MTL2_G[6]",
+					"strict" : false
+				},
+				{
+					"name" : "MTL2_G[7]",
+					"strict" : false
+				},
+				{
+					"name" : "MTL2_HSD",
+					"strict" : false
+				},
+				{
+					"name" : "MTL2_R[0]",
+					"strict" : false
+				},
+				{
+					"name" : "MTL2_R[1]",
+					"strict" : false
+				},
+				{
+					"name" : "MTL2_R[2]",
+					"strict" : false
+				},
+				{
+					"name" : "MTL2_R[3]",
+					"strict" : false
+				},
+				{
+					"name" : "MTL2_R[4]",
+					"strict" : false
+				},
+				{
+					"name" : "MTL2_R[5]",
+					"strict" : false
+				},
+				{
+					"name" : "MTL2_R[6]",
+					"strict" : false
+				},
+				{
+					"name" : "MTL2_R[7]",
+					"strict" : false
+				},
+				{
+					"name" : "MTL2_VSD",
+					"strict" : false
+				},
+				{
+					"name" : "SW[8]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[0]",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[9]",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tms",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tck",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdi",
+					"strict" : false
+				},
+				{
+					"name" : "altera_reserved_tdo",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

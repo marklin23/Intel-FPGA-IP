@@ -1,0 +1,28 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate "E:\work\cloud\GFEC\02_Altera\Altera_DemoBoard\MAX10 NEEK\Demonstrations\sdcard_audio\unnamed.qsys" --block-symbol-file --output-directory=E:\work\cloud\GFEC\02_Altera\Altera_IP\ddr\max10_proj\sd_card --family="MAX 10" --part=10M50DAF484C6GES
+Progress: Loading sdcard_audio/unnamed.qsys
+Progress: Reading input file
+Progress: Adding Altera_UP_SD_Card_Avalon_Interface_0 [Altera_UP_SD_Card_Avalon_Interface 16.1]
+Progress: Parameterizing module Altera_UP_SD_Card_Avalon_Interface_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate "E:\work\cloud\GFEC\02_Altera\Altera_DemoBoard\MAX10 NEEK\Demonstrations\sdcard_audio\unnamed.qsys" --synthesis=VERILOG --output-directory=E:\work\cloud\GFEC\02_Altera\Altera_IP\ddr\max10_proj\sd_card\synthesis --family="MAX 10" --part=10M50DAF484C6GES
+Progress: Loading sdcard_audio/unnamed.qsys
+Progress: Reading input file
+Progress: Adding Altera_UP_SD_Card_Avalon_Interface_0 [Altera_UP_SD_Card_Avalon_Interface 16.1]
+Progress: Parameterizing module Altera_UP_SD_Card_Avalon_Interface_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: unnamed: Generating unnamed "unnamed" for QUARTUS_SYNTH
+Info: Altera_UP_SD_Card_Avalon_Interface_0: "unnamed" instantiated Altera_UP_SD_Card_Avalon_Interface "Altera_UP_SD_Card_Avalon_Interface_0"
+Info: unnamed: Done "unnamed" with 2 modules, 12 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

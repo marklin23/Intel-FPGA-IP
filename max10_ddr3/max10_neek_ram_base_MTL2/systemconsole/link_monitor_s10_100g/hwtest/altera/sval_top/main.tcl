@@ -1,0 +1,6 @@
+source [file join [file dirname [info script]] "../../common/main.tcl"]
+source [file join [file dirname [info script]] "reg_map_inc.tcl"]
+source [file join [file dirname [info script]] "../alt_aeu_40/main.tcl"]
+source [file join [file dirname [info script]] "../optical_module/main.tcl"]
+source [file join [file dirname [info script]] "../pkt_client/pkt_client.tcl"]
+source [file join [file dirname [info script]] "../kr4/kr4.tcl"]
