@@ -1,0 +1,14 @@
+
+WORK > DEFAULT
+DEFAULT:                ./libraries/work/                  
+work:                   ./libraries/work/                  
+rst_controller:         ./libraries/rst_controller/        
+i2c_1:                  ./libraries/i2c_1/                 
+altera_ver:             ./libraries/altera_ver/            
+lpm_ver:                ./libraries/lpm_ver/               
+sgate_ver:              ./libraries/sgate_ver/             
+altera_mf_ver:          ./libraries/altera_mf_ver/         
+altera_lnsim_ver:       ./libraries/altera_lnsim_ver/      
+cycloneiv_hssi_ver:     ./libraries/cycloneiv_hssi_ver/    
+cycloneiv_pcie_hip_ver: ./libraries/cycloneiv_pcie_hip_ver/
+cycloneiv_ver:          ./libraries/cycloneiv_ver/         

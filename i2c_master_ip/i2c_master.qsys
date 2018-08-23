@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system name="$${FILENAME}">
+ <component
+   name="$${FILENAME}"
+   displayName="$${FILENAME}"
+   version="1.0"
+   description=""
+   tags=""
+   categories="" />
+ <parameter name="bonusData"><![CDATA[bonusData 
+{
+   element clk_0
+   {
+      datum _sortIndex
+      {
+         value = "0";
+         type = "int";
+      }
+   }
+   element i2c_1
+   {
+      datum _sortIndex
+      {
+         value = "1";
+         type = "int";
+      }
+   }
+}
+]]></parameter>
+ <parameter name="clockCrossingAdapter" value="HANDSHAKE" />
+ <parameter name="device" value="10M08DCU324C8G" />
+ <parameter name="deviceFamily" value="MAX 10" />
+ <parameter name="deviceSpeedGrade" value="8" />
+ <parameter name="fabricMode" value="QSYS" />
+ <parameter name="generateLegacySim" value="false" />
+ <parameter name="generationId" value="0" />
+ <parameter name="globalResetBus" value="false" />
+ <parameter name="hdlLanguage" value="VERILOG" />
+ <parameter name="hideFromIPCatalog" value="false" />
+ <parameter name="lockedInterfaceDefinition" value="" />
+ <parameter name="maxAdditionalLatency" value="1" />
+ <parameter name="projectName" value="" />
+ <parameter name="sopcBorderPoints" value="false" />
+ <parameter name="systemHash" value="0" />
+ <parameter name="testBenchDutName" value="" />
+ <parameter name="timeStamp" value="0" />
+ <parameter name="useTestBenchNamingPattern" value="false" />
+ <instanceScript></instanceScript>
+ <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
+ <interface name="i2c_1_csr" internal="i2c_1.csr" type="avalon" dir="end" />
+ <interface
+   name="i2c_1_i2c_serial"
+   internal="i2c_1.i2c_serial"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="i2c_1_interrupt_sender"
+   internal="i2c_1.interrupt_sender"
+   type="interrupt"
+   dir="end" />
+ <interface name="reset" internal="clk_0.clk_in_reset" type="reset" dir="end" />
+ <module name="clk_0" kind="clock_source" version="16.1" enabled="1">
+  <parameter name="clockFrequency" value="50000000" />
+  <parameter name="clockFrequencyKnown" value="true" />
+  <parameter name="inputClockFrequency" value="0" />
+  <parameter name="resetSynchronousEdges" value="NONE" />
+ </module>
+ <module name="i2c_1" kind="altera_avalon_i2c" version="16.1" enabled="1">
+  <parameter name="FIFO_DEPTH" value="32" />
+  <parameter name="USE_AV_ST" value="0" />
+  <parameter name="clockRate" value="50000000" />
+ </module>
+ <connection kind="clock" version="16.1" start="clk_0.clk" end="i2c_1.clock" />
+ <connection
+   kind="reset"
+   version="16.1"
+   start="clk_0.clk_reset"
+   end="i2c_1.reset_sink" />
+ <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
+ <interconnectRequirement for="$system" name="qsys_mm.enableEccProtection" value="FALSE" />
+ <interconnectRequirement for="$system" name="qsys_mm.insertDefaultSlave" value="FALSE" />
+ <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
+</system>

@@ -1,0 +1,32 @@
+# system info i2c_master on 2018.08.22.16:10:42
+system_info:
+name,value
+DEVICE,EP4CGX30CF23C7
+DEVICE_FAMILY,Cyclone IV GX
+GENERATION_ID,1534925439
+#
+#
+# Files generated for i2c_master on 2018.08.22.16:10:42
+files:
+filepath,kind,attributes,module,is_top
+simulation/i2c_master.v,VERILOG,,i2c_master,true
+simulation/submodules/altera_avalon_i2c.v,VERILOG,TOP_LEVEL_FILE,altera_avalon_i2c,false
+simulation/submodules/altera_avalon_i2c_csr.v,VERILOG,,altera_avalon_i2c,false
+simulation/submodules/altera_avalon_i2c_clk_cnt.v,VERILOG,,altera_avalon_i2c,false
+simulation/submodules/altera_avalon_i2c_condt_det.v,VERILOG,,altera_avalon_i2c,false
+simulation/submodules/altera_avalon_i2c_condt_gen.v,VERILOG,,altera_avalon_i2c,false
+simulation/submodules/altera_avalon_i2c_fifo.v,VERILOG,,altera_avalon_i2c,false
+simulation/submodules/altera_avalon_i2c_mstfsm.v,VERILOG,,altera_avalon_i2c,false
+simulation/submodules/altera_avalon_i2c_rxshifter.v,VERILOG,,altera_avalon_i2c,false
+simulation/submodules/altera_avalon_i2c_txshifter.v,VERILOG,,altera_avalon_i2c,false
+simulation/submodules/altera_avalon_i2c_spksupp.v,VERILOG,,altera_avalon_i2c,false
+simulation/submodules/altera_avalon_i2c_txout.v,VERILOG,,altera_avalon_i2c,false
+simulation/submodules/altera_reset_controller.v,VERILOG,,altera_reset_controller,false
+simulation/submodules/altera_reset_synchronizer.v,VERILOG,,altera_reset_controller,false
+simulation/submodules/altera_reset_controller.sdc,SDC,,altera_reset_controller,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+i2c_master.i2c_1,altera_avalon_i2c
+i2c_master.rst_controller,altera_reset_controller

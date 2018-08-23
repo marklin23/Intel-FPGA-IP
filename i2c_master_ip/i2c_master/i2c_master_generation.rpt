@@ -1,0 +1,71 @@
+Info: Starting: Create simulation model
+Info: qsys-generate E:\work\project\11_Accton\_ChaoHua\_ES8632BT_400G\01_Source_Code\FPGA\ES8632BT_400G_FPGA_R0A_20180822\Quartus_16_1\ip\i2c_master_ip\i2c_master.qsys --simulation=VERILOG --allow-mixed-language-simulation --output-directory=E:\work\project\11_Accton\_ChaoHua\_ES8632BT_400G\01_Source_Code\FPGA\ES8632BT_400G_FPGA_R0A_20180822\Quartus_16_1\ip\i2c_master_ip\i2c_master\simulation --family="Cyclone IV GX" --part=EP4CGX30CF23C7
+Progress: Loading i2c_master_ip/i2c_master.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 16.1]
+Progress: Parameterizing module clk_0
+Progress: Adding i2c_1 [altera_avalon_i2c 16.1]
+Progress: Parameterizing module i2c_1
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: i2c_master: Generating i2c_master "i2c_master" for SIM_VERILOG
+Info: i2c_1: "i2c_master" instantiated altera_avalon_i2c "i2c_1"
+Info: rst_controller: "i2c_master" instantiated altera_reset_controller "rst_controller"
+Info: i2c_master: Done "i2c_master" with 3 modules, 15 files
+Info: qsys-generate succeeded.
+Info: Finished: Create simulation model
+Info: Starting: Create Modelsim Project.
+Info: sim-script-gen --spd=E:\work\project\11_Accton\_ChaoHua\_ES8632BT_400G\01_Source_Code\FPGA\ES8632BT_400G_FPGA_R0A_20180822\Quartus_16_1\ip\i2c_master_ip\i2c_master\i2c_master.spd --output-directory=E:/work/project/11_Accton/_ChaoHua/_ES8632BT_400G/01_Source_Code/FPGA/ES8632BT_400G_FPGA_R0A_20180822/Quartus_16_1/ip/i2c_master_ip/i2c_master/simulation/ --use-relative-paths=true
+Info: Doing: ip-make-simscript --spd=E:\work\project\11_Accton\_ChaoHua\_ES8632BT_400G\01_Source_Code\FPGA\ES8632BT_400G_FPGA_R0A_20180822\Quartus_16_1\ip\i2c_master_ip\i2c_master\i2c_master.spd --output-directory=E:/work/project/11_Accton/_ChaoHua/_ES8632BT_400G/01_Source_Code/FPGA/ES8632BT_400G_FPGA_R0A_20180822/Quartus_16_1/ip/i2c_master_ip/i2c_master/simulation/ --use-relative-paths=true
+Info: Generating the following file(s) for MODELSIM simulator in E:/work/project/11_Accton/_ChaoHua/_ES8632BT_400G/01_Source_Code/FPGA/ES8632BT_400G_FPGA_R0A_20180822/Quartus_16_1/ip/i2c_master_ip/i2c_master/simulation/ directory:
+Info: 	mentor/msim_setup.tcl
+Info: Generating the following file(s) for VCS simulator in E:/work/project/11_Accton/_ChaoHua/_ES8632BT_400G/01_Source_Code/FPGA/ES8632BT_400G_FPGA_R0A_20180822/Quartus_16_1/ip/i2c_master_ip/i2c_master/simulation/ directory:
+Info: 	synopsys/vcs/vcs_setup.sh
+Info: Generating the following file(s) for VCSMX simulator in E:/work/project/11_Accton/_ChaoHua/_ES8632BT_400G/01_Source_Code/FPGA/ES8632BT_400G_FPGA_R0A_20180822/Quartus_16_1/ip/i2c_master_ip/i2c_master/simulation/ directory:
+Info: 	synopsys/vcsmx/synopsys_sim.setup
+Info: 	synopsys/vcsmx/vcsmx_setup.sh
+Info: Generating the following file(s) for NCSIM simulator in E:/work/project/11_Accton/_ChaoHua/_ES8632BT_400G/01_Source_Code/FPGA/ES8632BT_400G_FPGA_R0A_20180822/Quartus_16_1/ip/i2c_master_ip/i2c_master/simulation/ directory:
+Info: 	cadence/cds.lib
+Info: 	cadence/hdl.var
+Info: 	cadence/ncsim_setup.sh
+Info: 	2 .cds.lib files in cadence/cds_libs/ directory
+Info: Generating the following file(s) for RIVIERA simulator in E:/work/project/11_Accton/_ChaoHua/_ES8632BT_400G/01_Source_Code/FPGA/ES8632BT_400G_FPGA_R0A_20180822/Quartus_16_1/ip/i2c_master_ip/i2c_master/simulation/ directory:
+Info: 	aldec/rivierapro_setup.tcl
+Info: For information on how to simulate your IP, see the explanatory comments in the simulator-specific subdirectories under E:/work/project/11_Accton/_ChaoHua/_ES8632BT_400G/01_Source_Code/FPGA/ES8632BT_400G_FPGA_R0A_20180822/Quartus_16_1/ip/i2c_master_ip/i2c_master/simulation/.
+Info: Regenerate these scripts whenever you make any change to any Quartus-generated IP in your project.
+Info: Finished: Create Modelsim Project.
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate E:\work\project\11_Accton\_ChaoHua\_ES8632BT_400G\01_Source_Code\FPGA\ES8632BT_400G_FPGA_R0A_20180822\Quartus_16_1\ip\i2c_master_ip\i2c_master.qsys --block-symbol-file --output-directory=E:\work\project\11_Accton\_ChaoHua\_ES8632BT_400G\01_Source_Code\FPGA\ES8632BT_400G_FPGA_R0A_20180822\Quartus_16_1\ip\i2c_master_ip\i2c_master --family="Cyclone IV GX" --part=EP4CGX30CF23C7
+Progress: Loading i2c_master_ip/i2c_master.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 16.1]
+Progress: Parameterizing module clk_0
+Progress: Adding i2c_1 [altera_avalon_i2c 16.1]
+Progress: Parameterizing module i2c_1
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate E:\work\project\11_Accton\_ChaoHua\_ES8632BT_400G\01_Source_Code\FPGA\ES8632BT_400G_FPGA_R0A_20180822\Quartus_16_1\ip\i2c_master_ip\i2c_master.qsys --synthesis=VERILOG --output-directory=E:\work\project\11_Accton\_ChaoHua\_ES8632BT_400G\01_Source_Code\FPGA\ES8632BT_400G_FPGA_R0A_20180822\Quartus_16_1\ip\i2c_master_ip\i2c_master\synthesis --family="Cyclone IV GX" --part=EP4CGX30CF23C7
+Progress: Loading i2c_master_ip/i2c_master.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 16.1]
+Progress: Parameterizing module clk_0
+Progress: Adding i2c_1 [altera_avalon_i2c 16.1]
+Progress: Parameterizing module i2c_1
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: i2c_master: Generating i2c_master "i2c_master" for QUARTUS_SYNTH
+Info: i2c_1: "i2c_master" instantiated altera_avalon_i2c "i2c_1"
+Info: rst_controller: "i2c_master" instantiated altera_reset_controller "rst_controller"
+Info: i2c_master: Done "i2c_master" with 3 modules, 15 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file
+   path="simulation/submodules/altera_reset_controller.v"
+   type="VERILOG"
+   library="rst_controller" />
+ <file
+   path="simulation/submodules/altera_reset_synchronizer.v"
+   type="VERILOG"
+   library="rst_controller" />
+ <file
+   path="simulation/submodules/altera_reset_controller.sdc"
+   type="SDC"
+   library="rst_controller" />
+ <file
+   path="simulation/submodules/altera_avalon_i2c.v"
+   type="VERILOG"
+   library="i2c_1" />
+ <file
+   path="simulation/submodules/altera_avalon_i2c_csr.v"
+   type="VERILOG"
+   library="i2c_1" />
+ <file
+   path="simulation/submodules/altera_avalon_i2c_clk_cnt.v"
+   type="VERILOG"
+   library="i2c_1" />
+ <file
+   path="simulation/submodules/altera_avalon_i2c_condt_det.v"
+   type="VERILOG"
+   library="i2c_1" />
+ <file
+   path="simulation/submodules/altera_avalon_i2c_condt_gen.v"
+   type="VERILOG"
+   library="i2c_1" />
+ <file
+   path="simulation/submodules/altera_avalon_i2c_fifo.v"
+   type="VERILOG"
+   library="i2c_1" />
+ <file
+   path="simulation/submodules/altera_avalon_i2c_mstfsm.v"
+   type="VERILOG"
+   library="i2c_1" />
+ <file
+   path="simulation/submodules/altera_avalon_i2c_rxshifter.v"
+   type="VERILOG"
+   library="i2c_1" />
+ <file
+   path="simulation/submodules/altera_avalon_i2c_txshifter.v"
+   type="VERILOG"
+   library="i2c_1" />
+ <file
+   path="simulation/submodules/altera_avalon_i2c_spksupp.v"
+   type="VERILOG"
+   library="i2c_1" />
+ <file
+   path="simulation/submodules/altera_avalon_i2c_txout.v"
+   type="VERILOG"
+   library="i2c_1" />
+ <file path="simulation/i2c_master.v" type="VERILOG" />
+ <topLevel name="i2c_master" />
+ <deviceFamily name="cycloneivgx" />
+</simPackage>
